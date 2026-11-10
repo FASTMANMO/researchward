@@ -109,6 +109,9 @@ The handouts in [`docs/handouts/`](docs/handouts/) are unofficial study notes th
 
 © 2026 Mohammed Meligy, Mechanical and Aerospace Engineering, Arizona State University.
 
-The skills, handouts, figures and benchmark numbers in this repository are licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/); the full text is in [LICENSE](LICENSE). You may share and adapt them for any purpose, as long as you credit the author, link to the license and say what you changed. The methods come from Larry McEnerney's lectures, credited under [Sources and credit](#sources-and-credit); the license covers this repository's own text and data, not his lectures.
+- **Skills, tests and scripts** (`skills/`, `tests/`, the code in `benchmarks/`): [MIT](LICENSE). Use, change and share them freely, in any project, as long as the copyright notice stays with them.
+- **Handouts, figures and benchmark data** (`docs/handouts/`, `docs/images/`, `benchmarks/data/`): [CC BY 4.0](LICENSE-CC-BY-4.0). Share and adapt them for any purpose, as long as you credit the author, link to the license and say what you changed.
 
-**How to credit:** *Researchward* by Mohammed Meligy (Arizona State University), https://github.com/FASTMANMO/researchward, licensed under CC BY 4.0.
+The methods come from Larry McEnerney's lectures, credited under [Sources and credit](#sources-and-credit); these licenses cover this repository's own text, code and data, not his lectures.
+
+**How to credit:** *Researchward* by Mohammed Meligy (Arizona State University), https://github.com/FASTMANMO/researchward.

@@ -1,9 +1,9 @@
 ---
 name: effective-writing
 description: "Checks one paragraph against Larry McEnerney's writing-for-readers criteria (EW-1 to EW-10): does it give readers a role, name and challenge what they believe, show what is at stake for them, describe the contribution in words they can use, and put what they care about in sentence subjects and endings, with nothing that makes them slow down or reread. Fills a reader card first, shows the paragraph sentence by sentence, then marks each criterion met, partly met or not met with what the paragraph does, one fix for each gap and one priority fix. Use it whenever someone asks to check, improve, tighten or diagnose a paragraph, an abstract, an opening paragraph or any short piece of their own writing for its readers, or asks why a paragraph isn't landing. Load it afresh for every paragraph, even later in a conversation. For someone else's paragraph it gives the same table without fixes. For a whole paper's problem, stance and stakes use mcenerney-lens."
-license: CC-BY-4.0
+license: MIT
 metadata:
-  version: "0.6.2"
+  version: "0.6.3"
   author: "Mohammed Meligy, Mechanical and Aerospace Engineering, Arizona State University"
   source: "Handout 2, Writing for Readers: Paragraph Analysis Criteria (docs/handouts in the repo)"
 ---

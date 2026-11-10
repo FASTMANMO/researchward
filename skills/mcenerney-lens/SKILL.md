@@ -1,9 +1,9 @@
 ---
 name: mcenerney-lens
 description: "Reads a whole research paper, or a draft, through Larry McEnerney's reader-value lens (fields L1-L12): its readers, value words in context, the value it offers, the problem, its stance toward prior work, the stakes, the doubts it answers, its contribution, its structure and its pitfalls, each with an exact location in any section. Two modes: dissect someone else's paper (describes what it does, never grades it) or self-check your own draft (each field met, partly met or not met, with one fix). Use it whenever someone wants to dissect, break down, analyze or learn from a paper, asks whether a paper is worth reading closely or what problem, stakes or contribution it sets up, wants their own draft reviewed before submission or asks whether it makes readers care, or mentions McEnerney, value words, or the gap vs error model. Load it afresh for every paper, even later in a conversation. For sentence-level checks of one paragraph use effective-writing."
-license: CC-BY-4.0
+license: MIT
 metadata:
-  version: "0.8.3"
+  version: "0.8.4"
   author: "Mohammed Meligy, Mechanical and Aerospace Engineering, Arizona State University"
   source: "Handout 1, Expert Academic Writing Methods (docs/handouts in the repo)"
 ---
