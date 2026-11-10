@@ -2,9 +2,9 @@
 
 **Read for value. Write for readers.**
 
-Most researchers revise a paper for clarity: shorter sentences, cleaner grammar, a tighter structure. Expert readers, however, read for value, not clarity. They stop when they can't find a problem they care about, or what it costs them to ignore it, and a clear paper that hides its problem still gets skimmed or rejected. Grammar checkers and AI editors work on the prose; they don't check for that. Researchward's skills do: they read a paper the way its readers will, find its problem, stakes and value, and point to the sentence where each appears, so you can see how a paper you admire wins its readers, or where your own draft loses them.
+Most researchers revise a paper for clarity: shorter sentences, cleaner grammar, a tighter structure. Expert readers, however, read for value, not clarity. They stop when they can't find a problem they care about, or what it costs them to ignore it, and a clear paper that hides its problem still gets skimmed or rejected. Grammar checkers and AI editors work on the prose; they don't check for that. Researchward's skills do: they read a paper the way its readers will, find its problem, stakes, and value, and point to the sentence where each appears, so you can see how a paper you admire wins its readers, or where your own draft loses them.
 
-The same reading helps when the paper isn't yours. Experts can skim a paper for its problem and contribution in minutes, but that skill takes years to build, and without it, a reader can spend an afternoon on a paper before realizing it wasn't for them. The lens does that skim with you: whether you're a PhD student, a postdoc, a reviewer or a professor, in any field, it shows what a paper sets out to solve, what it costs to ignore, what it offers and where each is stated, so you can decide quickly whether it deserves your time.
+The same reading helps when the paper isn't yours. Experts can skim a paper for its problem and contribution in minutes, but that skill takes years to build, and without it, a reader can spend an afternoon on a paper before realizing it wasn't for them. The lens does that skim with you: whether you're a PhD student, a postdoc, a reviewer or a professor, in any field, it shows what a paper sets out to solve, what it costs to ignore, what it offers, and where each is stated, so you can decide quickly whether it deserves your time.
 
 **Why McEnerney?** Larry McEnerney taught writing at the University of Chicago for more than 40 years and directed its Writing Program, which teaches more than 2,000 members of the university each year. He was among the first graduate students to teach the Little Red Schoolhouse, the writing course built by Joseph M. Williams and Gregory G. Colomb, two of the authors of *The Craft of Research*, and he received the university's Quantrell Award for excellence in teaching in 1997. His lecture *The Craft of Writing Effectively* has been viewed millions of times on YouTube, and its central claim, that expert readers read for value, not clarity, is the method these skills put to work. The skills are built on his Leadership Lab lectures and work with Claude, ChatGPT, and Codex.
 
@@ -12,11 +12,11 @@ The same reading helps when the paper isn't yours. Experts can skim a paper for 
 
 ## Install
 
-**The easy way: give your AI agent the link.** In an agent that can run commands, such as Claude Code, Codex, Cursor or Gemini CLI, paste:
+**The easy way: give your AI agent the link.** In an agent that can run commands, such as Claude Code, Codex, Cursor, or Gemini CLI, paste:
 
 > Install the skills from https://github.com/FASTMANMO/researchward
 
-It reads the steps under [For AI agents](#for-ai-agents) and does the rest. Start a new session afterwards so the skills load.
+It reads the steps under [For AI agents](#for-ai-agents) and does the rest. Start a new session afterward so the skills load.
 
 **Claude Code**, as a plugin that also receives updates:
 
