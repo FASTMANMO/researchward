@@ -1,0 +1,31 @@
+# LaTeX build files (rebuild the handout PDFs from docs/handouts/*.tex)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+
+# Results written by `claude plugin eval` and local test runs
+evals/results/
+**/evals/results/
+runs*/
+
+# Packaged skills and archives (build them; don't commit them)
+*.skill
+*.zip
+
+# Python and Node caches
+__pycache__/
+*.pyc
+node_modules/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local secrets
+.env

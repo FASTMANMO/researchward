@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: dissect-published-paragraph
+expected_outcome: |
+  Because the paragraph is someone else's, the report is in DISSECT mode
+  (G6): the same three-column table (Criterion, Met?, What the paragraph
+  does) for all ten criteria, citing sentence numbers, but no fix moves,
+  no How to fix list and no priority fix. The
+  findings trace the paragraph's moves: the readers' practice and
+  assumption (S1), the turn (S2, "incomplete"), what the model gets
+  wrong (S3) and the tool offered (S4).

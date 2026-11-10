@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: self-check-backscatter-intro
+expected_outcome: |
+  A SELF-CHECK report on fields L1 to L12 that matches the self-check
+  table in Handout 1, Section 6 (revised 6 Nov 2026): L6 PARTIAL (cost
+  stated as physics; M2 or M10), L7 MISSING (no doubt anticipated; M4),
+  L12 PARTIAL (the question first appears in P2 S4; M8), every other
+  field STRONG. The priority fix is L6. Each field has at most one fix
+  move, each fix names a method, numbers and claims stay untouched, and
+  a closing sentence offers effective-writing on the opening paragraph.
+context:
+  scaffold_script: place-files.sh

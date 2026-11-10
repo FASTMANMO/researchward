@@ -1,0 +1,657 @@
+% =====================================================================
+%  mcenerney-lens-handout.tex
+%  Handout 1 -- Expert Academic Writing Methods
+%
+%  Source: L. McEnerney, "Leadership Lab: The Craft of Writing
+%          Effectively", University of Chicago Writing Program,
+%          recording posted 26 June 2014.
+%  Pairs with Handout 2 (effective-writing): this handout checks a
+%  paper's readers, problem and positioning; Handout 2 checks a single
+%  paragraph against the same reader-value idea.
+%
+%  REPO NOTES
+%  - The wording of the first four philosophy points, M1-M5, the
+%    pitfalls and the Bonus Tip is the original handout's. The action
+%    items (L1-L12) were rewritten on 6 Nov 2026 (see below); the
+%    original questions are kept inside them.
+%  - Added from a review of the lecture transcript (25 Oct 2026):
+%    the fifth philosophy point, M6-M10 and L9-L13. They are tagged
+%    ADDED in the PDF; set \markaddedfalse below to hide the tags.
+%  - Also added: Sections 5-8 (using the lens, worked example,
+%    worksheet, report format). Their code sits between the
+%    ADDITIONS markers, in the preamble and before the References.
+%  - Method IDs (M1 ... M10) and lens-field IDs (L1 ... L12) are stable
+%    from the 6 Nov 2026 revision on.
+%    The mcenerney-lens skill and its reports cite them, so never
+%    renumber: append new IDs at the end instead. To print plain
+%    numbers instead of M1/L1, edit \methodid and \lensid below.
+%  - Time stamps (h:mm:ss) point to the recorded lecture so every
+%    point can be traced back to where it is taught.
+%  - Compiles with pdfLaTeX on Overleaf (TeX Live 2020 or later).
+%    For A4 paper, change "letterpaper" in the geometry line.
+%  - 25 Oct 2026, settled with Handout 2 for the skills repo: locations
+%    are written P2 S3 (no pilcrow); L12 has a status cutoff; R5 caps
+%    quotes; the L2 word list matches the compiled PDF (no "important");
+%    the report format matches the mcenerney-lens skill; a "With
+%    Handout 2" note after the Bonus Tip says what each handout leaves
+%    to the other. In the worked example, P1 S3's "it drains" became
+%    "the closure drains", because "it" first read as backscatter.
+%  - 6 Nov 2026, action items restructured before the repo goes public
+%    (the one-time renumbering). The lens reads the whole paper (R6);
+%    readers and communities merged (L1); value words quoted in their
+%    sentence, with reusable frames (L2); new fields for value offered
+%    (L3), doubts answered (L7) and pitfalls (L10); fields L1-L10 cover
+%    the whole paper; the problem in three parts (L4); "move" and
+%    "positioning" renamed (L5 stance, L8 contribution), stance placed
+%    right after the problem;
+%    explanation order folded into structure (L9); figures became
+%    locations; each field names the methods it draws on; R2 locations
+%    use the sentence's first words; R5 allows one sentence per finding.
+%    Old -> new: L1+L9 -> L1; L2+L8 -> L2; L3 -> L4; L4 -> L6; L5 -> L8;
+%    L6 -> L5; L7+L10 -> L9; L11 -> figures as locations; L12 -> L11;
+%    L13 -> L12.
+%  - 6 Nov 2026, later: reports label fields by number and name
+%    ("1- Readers"), not by ID; L10 became four named checks, each
+%    tied to a Common Pitfall; report cells allow about 60 words.
+% =====================================================================
+
+\documentclass[11pt]{article}
+
+% ---------- Fonts and encoding ---------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}                 % body: Bitstream Charter
+\usepackage[scaled=0.90]{helvet}     % sans: Helvetica clone for headings
+\usepackage{microtype}
+
+% ---------- Page layout ----------------------------------------------
+\usepackage[letterpaper,margin=0.9in,headheight=14pt]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Expert Academic Writing Methods (Handout 1)}, pdfauthor={Mohammed Meligy}}
+
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+% ---------- Colours (shared with Handout 2) --------------------------
+\definecolor{ink}{HTML}{1F2328}
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{muted}{HTML}{5B6B7D}
+\definecolor{rulec}{HTML}{C9D3DF}
+\definecolor{fill}{HTML}{F2F5F9}
+\color{ink}
+
+% ---------- Headings -------------------------------------------------
+\titleformat{\section}{\sffamily\large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{ink}}{}{0em}{}
+\titlespacing*{\section}{0pt}{16pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+
+% ---------- Header and footer ----------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{rulec}\hrule height\headrulewidth}
+\fancyhead[L]{\sffamily\footnotesize\color{muted}Expert Academic Writing Methods}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}mcenerney-lens}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+
+% ---------- Small helpers --------------------------------------------
+\newcommand{\tsin}[1]{\mbox{\sffamily\footnotesize\color{muted}[#1]}} % time stamp inside a sentence
+% Time stamp ending an item: sits flush right on the last line, or on its own line if it does not fit.
+\newcommand{\ts}[1]{{\unskip\nobreak\hfil\penalty50\hskip0.8em\hbox{}\nobreak\hfil\tsin{#1}\parfillskip=0pt\par}}
+\newcommand{\methodid}[1]{M#1}                                    % method ID shown on cards
+\newcommand{\lensid}[1]{L#1}                                      % lens-field ID shown on action items
+\newif\ifmarkadded \markaddedtrue   % \markaddedfalse hides the ADDED tags
+\newcommand{\added}{\ifmarkadded\,{\setlength{\fboxsep}{1.2pt}\fcolorbox{rulec}{white}{\sffamily\tiny\bfseries\color{accent}ADDED}}\fi}
+
+% >>> ADDITIONS-PREAMBLE BEGIN (worked example, worksheet, report format)
+\usepackage{array,tabularx,booktabs}
+\usepackage{needspace}
+\definecolor{strongc}{HTML}{2E6B3F}
+\definecolor{partialc}{HTML}{9A6700}
+\definecolor{missingc}{HTML}{A33A2B}
+\newcommand{\badge}[2]{{\setlength{\fboxsep}{1.6pt}\colorbox{#1}{\sffamily\scriptsize\bfseries\color{white}\strut#2}}}
+\newcommand{\stS}{\badge{strongc}{STRONG}}
+\newcommand{\stP}{\badge{partialc}{PARTIAL}}
+\newcommand{\stM}{\badge{missingc}{MISSING}}
+\newcommand{\stN}{\badge{muted}{N/A}}
+\newcommand{\sn}[1]{\textsuperscript{\sffamily\bfseries\color{accent}S#1}\,}  % sentence label in example text
+\newcommand{\pn}[1]{{\sffamily\bfseries\color{accent}P#1}\enspace}           % paragraph label in example text
+\newcommand{\loc}[1]{\leavevmode{\sffamily\footnotesize\color{accent}#1}}       % location in tables
+% <<< ADDITIONS-PREAMBLE END
+
+% Lists
+\setlist{itemsep=3pt,parsep=0pt,topsep=3pt}
+\setlist[itemize]{leftmargin=1.4em}
+\newlist{lensfields}{description}{1}
+\setlist[lensfields]{style=multiline,leftmargin=2.6em,font=\sffamily\bfseries\color{accent},itemsep=3pt}
+
+% Method card:  \begin{method}{ID}{Title}{time stamps} ... \end{method}
+\newtcolorbox{method}[3]{%
+  enhanced,
+  colback=white, colframe=rulec, boxrule=0.6pt, arc=2pt,
+  colbacktitle=fill, coltitle=ink, toptitle=3pt, bottomtitle=3pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt,
+  fonttitle=\sffamily\bfseries,
+  title={\textcolor{accent}{#1}\quad #2\hfill{\mdseries\footnotesize\color{muted}#3}},
+  before skip=9pt, after skip=9pt}
+
+% Plain shaded panel for notes
+\newtcolorbox{panel}[1][]{%
+  enhanced, breakable, colback=fill, colframe=fill, arc=2pt,
+  left=10pt, right=10pt, top=7pt, bottom=7pt,
+  before skip=8pt, after skip=8pt, #1}
+
+% =====================================================================
+\begin{document}
+
+% ---------- Title block ----------------------------------------------
+{\sffamily\footnotesize\bfseries\color{muted}HANDOUT 1 \textperiodcentered{} MCENERNEY-LENS}\par\vspace{2pt}
+{\sffamily\LARGE\bfseries Expert Academic Writing Methods}\par\vspace{3pt}
+{\sffamily\small\bfseries Mohammed Meligy}{\sffamily\small\color{muted}\ \textperiodcentered{} Mechanical and Aerospace Engineering, Arizona State University \textperiodcentered{} \textcopyright{} 2026, CC BY 4.0}\par\vspace{3pt}
+{\small\color{muted}Compiled from \emph{The Craft of Writing Effectively}, a Leadership Lab lecture by Larry McEnerney
+(University of Chicago Writing Program); recording posted 26 June 2014. Unofficial study handout: time stamps
+such as \tsin{31:34} point to the recording.}\par
+\vspace{4pt}{\color{rulec}\rule{\linewidth}{0.6pt}}
+
+% =====================================================================
+\section{Writing Philosophy Overview}
+
+\begin{itemize}
+  \item Academic writing is not about rules; it's about \textbf{readers}. \ts{2:59--3:54}
+  \item The purpose of writing is not to convey what you think \emph{but to change what your readers think}.
+        \ts{21:22--22:07}
+  \item Your writing succeeds only if it is perceived as \textbf{valuable} by a specific community of readers.
+        \ts{14:08--16:24}
+  \item Value is defined \emph{not} in the content itself but by how readers use or respond to it.
+        \ts{15:27--16:31}
+  \item Knowledge is a conversation that moves through time, not a pile that grows with every new fact. The
+        community decides what counts as knowledge, and ideas also get left behind; new information it does not
+        care about is not knowledge.\added \ts{28:03--30:51}
+\end{itemize}
+
+% =====================================================================
+\section{Core Methods for Effective Academic Writing}
+
+\begin{method}{\methodid{1}}{Value-Oriented Writing}{22:13--34:10}
+\begin{itemize}
+  \item Ask not \emph{what do I want to say?} but \emph{why should my readers care?} \ts{22:13--22:38}
+  \item Use language that signals value: words like \emph{nonetheless}, \emph{however}, \emph{although},
+        \emph{inconsistent}, \emph{anomaly}, \emph{reported}, \emph{widely}, \emph{accepted}. \ts{31:28--32:21}
+  \item Spend 15 minutes a week reading articles in your field and \textbf{circling value-signaling words}.
+        Build your own word bank. \ts{32:27--34:10}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{2}}{Know Your Readers}{16:37--17:10; 34:46--35:20; 1:00:57}
+\begin{itemize}
+  \item Understand the beliefs, assumptions, and doubts of your specific disciplinary audience. \ts{34:46--35:20}
+  \item Avoid generic writing aimed at abstract or standardized readers (e.g., SAT/AP). \ts{16:45--17:10}
+  \item Learn how your target journals express \textbf{costs} (what's at stake) and \textbf{benefits} (what is
+        gained). \ts{1:00:57--1:02:37}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{3}}{Constructing Problems Effectively}{37:24--38:40; 55:19--59:05}
+\begin{itemize}
+  \item Shift from background or definitions to \textbf{instability} or \textbf{tension}. \ts{55:19--56:25; 58:42}
+  \item Build problems that \textbf{matter to your readers}, not problems of personal interest. \ts{56:45--58:07}
+  \item Problems should challenge assumptions or practices in the field. \ts{37:24--38:40}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{4}}{Argument vs.\ Explanation}{20:18--24:48; 40:23--40:48}
+\begin{itemize}
+  \item Do not \emph{explain to show what you know}; \textbf{argue to change what your readers think}.
+        \ts{20:18--20:57; 40:23}
+  \item Explanation is inward-facing. Argumentation is outward-facing. \ts{20:57--21:17}
+  \item Predict and overcome reader doubts. Your goal is not self-revelation but persuasion.
+        \ts{35:09; 40:29--40:48}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{5}}{Literature Reviews as Problem Builders}{1:03:14--1:10:45}
+\begin{itemize}
+  \item A professional literature review enriches the \textbf{problem}, rather than listing chronologically who
+        said what. \ts{1:04:52--1:05:23}
+  \item Highlight tensions, contradictions, or conflicts between works. \ts{1:05:23--1:06:43}
+  \item Avoid the \emph{gap model} (``this hasn't been done''). Prefer the \textbf{error model} (``this has been
+        done, but there's a problem''). \ts{1:08:47--1:10:45}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{6}}{Two Kinds of Value Words\added}{35:27--37:12; 53:35--54:52}
+\begin{itemize}
+  \item \textbf{Community words} such as \emph{widely}, \emph{accepted} and \emph{reported} show that a community
+        of readers already cares about the question. \ts{35:27--35:55}
+  \item \textbf{Instability words} such as \emph{nonetheless}, \emph{however}, \emph{although}, \emph{inconsistent}
+        and \emph{anomaly} show that something in that community's understanding is unstable. They create tension,
+        whatever their part of speech. \ts{53:35--54:52}
+  \item \textbf{Flow words} such as \emph{because}, \emph{and}, \emph{if} and \emph{unless} make prose flow but
+        create no value. Don't count them as value words. \ts{36:15--37:12}
+  \item \emph{Rarely} (``has rarely been scrutinized'') is often code for a gap claim. \ts{1:10:53--1:10:59}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{7}}{Value Before Explanation\added}{19:52--25:13}
+\begin{itemize}
+  \item Your readers' professional function is to challenge what you say: nothing is accepted as knowledge until
+        someone competent has challenged it. \ts{23:16--24:27}
+  \item Explanation belongs only after value has been established and persuasion has begun. \ts{24:27--24:48}
+  \item Don't open with a definition. It shows a teacher that you know it; it gives a professional reader
+        nothing. \ts{25:00--25:13}
+  \item When readers say your work doesn't seem important, or that they didn't understand it, don't respond by
+        explaining more. \ts{19:52--20:23}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{8}}{Openings That Show a Problem\added}{55:19--1:00:37; 1:07:55}
+\begin{itemize}
+  \item Avoid the ``martini glass'' opening: a generalization, then a thesis, then a generalization again.
+        \ts{55:47--56:19}
+  \item Readers scan an opening for instability. Language of continuity and consistency there interferes with
+        their reading, and they can stop two paragraphs in. \ts{59:05--1:00:37}
+  \item A thesis is a solution only if readers can see the problem it solves, so the problem must be stated.
+        \ts{58:12--58:36}
+  \item Locate the problem in something readers care about: for academic readers, something they want to
+        understand; for other readers, something they want to fix. \ts{57:22--58:07}
+  \item When readers ask for ``more background,'' they usually mean they can't see why it matters. The background
+        they need is a problem. \ts{1:07:55--1:08:21}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{9}}{Saying ``You're Wrong'' in the Community's Code\added}{39:05--44:13}
+\begin{itemize}
+  \item ``I have something to add'' invites the reply ``we don't care.'' Showing that the community has
+        something wrong gives it a reason to listen. \ts{41:16--41:51}
+  \item Every community has a polite code for ``you're wrong,'' often deferential: you have advanced this field,
+        but there is one thing here that is wrong. Learn how your journals say it. \ts{39:05--40:14; 43:50--44:02}
+  \item Break the code and you get slapped down; skip the move altogether and you get rejected.
+        \ts{44:02--44:13}
+\end{itemize}
+\end{method}
+
+\begin{method}{\methodid{10}}{Raising the Costs in a Literature Review\added}{1:04:21--1:06:43; 1:09:49}
+\begin{itemize}
+  \item Credibility and acknowledging the community's work are real functions of a literature review too.
+        \ts{1:04:21--1:04:41}
+  \item The strongest reviews raise the costs: the tension matters because the community has kept building on
+        it, so ``we'' are wrong too, not only earlier authors. \ts{1:06:05--1:06:43}
+  \item Gap claims assume knowledge is bounded, like a crossword puzzle. If knowledge is open-ended, filling one
+        gap leaves countless others, so the claim adds little. \ts{1:09:49--1:10:45}
+\end{itemize}
+\end{method}
+
+% =====================================================================
+\section{Common Pitfalls to Avoid}
+
+\begin{itemize}
+  \item Thinking writing is about expressing your thoughts---\allowbreak it's about changing others' thoughts.
+        \ts{21:30--22:07; 49:22}
+  \item Starting with personal curiosity or background instead of the reader's problem. \ts{56:45--57:22; 1:08:07}
+  \item Believing that ``originality'' guarantees value. \textbf{Value comes from relevance to the reader.}
+        \ts{25:26--30:58}
+  \item Assuming your writing will ``preserve ideas forever.'' The goal is participation, not permanence.
+        \ts{46:45--48:58}
+\end{itemize}
+
+% =====================================================================
+\section{Action Items: Reading an Article in Your Field}
+
+Read the whole article, not only the introduction: problems, stakes, value and doubts are often stated again, or
+stated more sharply, in later sections (R6). Fields L1--L10 cover the whole paper; for each, record what the text
+does and where, in whichever section it appears. \emph{Draws on} names the methods behind each field.
+
+\begin{lensfields}
+  \item[\lensid{1}] \textbf{Identify the readers:} Two parts. \emph{Research community}: whose understanding does
+        the paper set out to change? Interdisciplinary work has several communities, and each defines problems and
+        judges arguments differently. \emph{Wider readers}: who could use the work to fix something, such as
+        practitioners or engineers? Note the journal it is published in. Draws on M2, M8.
+        \ts{34:46; 57:22--58:07; 1:12:19--1:14:04}
+  \item[\lensid{2}] \textbf{Circle value words, in context:} Quote each value word in its sentence, with the word in
+        bold. Sort it as an instability word (\emph{however}, \emph{nonetheless}, \emph{inconsistent},
+        \emph{problematic}, \emph{anomaly}) or a community word (\emph{widely}, \emph{accepted}, \emph{reported}).
+        Flow words don't count; \emph{gap} and \emph{rarely} often signal a gap claim. Where a sentence is worth
+        reusing, add its frame: the sentence with the paper's specifics replaced by slots. Draws on M1, M6 and the
+        Bonus Tip. \ts{31:34--34:10; 35:27--37:12; 53:35--54:52}
+  \item[\lensid{3}] \textbf{Name the value offered:}\added{} What do the authors say readers gain, overall? Quote the
+        sentence that says it. A type label, such as verification, method, benchmark, correction, theory or
+        practical use, is your interpretation, so mark it as one. Draws on M1, M2.
+        \ts{15:27--16:31; 1:00:57--1:02:37}
+  \item[\lensid{4}] \textbf{Find the problem:} State it in three parts, each with its location. \emph{Current
+        state}: what the community does or believes. \emph{Where it breaks}: each approach or assumption, and how it
+        fails. \emph{What remains open}: the question the paper answers. Is the problem explicit or implicit?
+        Draws on M3, M8. \ts{56:25--59:05}
+  \item[\lensid{5}] \textbf{Read the stance toward prior work:} Who do the authors say got the problem wrong: the
+        dominant view, rival approaches, or the community itself? Do they say it directly, or deferentially,
+        crediting the work before naming its limit? Draws on M9, M10. \ts{39:05--44:13; 1:16:43}
+  \item[\lensid{6}] \textbf{Find the stakes:} What does the text say it costs to ignore the problem, and what is
+        gained by solving it? Note whether the cost is stated as a cost to these readers (their predictions,
+        results or decisions) or only as a fact about the world. Draws on M2, M10.
+        \ts{1:00:57--1:02:21; 1:06:05--1:06:43}
+  \item[\lensid{7}] \textbf{Find the doubts answered:}\added{} Which reader doubts does the paper anticipate, such as
+        limitations, validation or ``one might argue,'' and where does it answer them? Draws on M4, M7.
+        \ts{23:16--24:27; 35:09; 40:29--40:48}
+  \item[\lensid{8}] \textbf{Find the contribution:} What does the paper offer in response to the problem? Is it named
+        as something readers can use (a tool, a test, a method) or only as an activity (``X is analyzed'')?
+        Draws on M1, M8. \ts{58:12--58:36}
+  \item[\lensid{9}] \textbf{Map the structure:} Does the paper build from instability: the problem, then prior work
+        that sharpens it, then the contribution? Do the discussion and conclusion return to the problem? Does
+        explanation (definitions, background, method) come only
+        after value is established? Does the literature review build the problem or list who said what, and does it
+        argue by the error model or the gap model? Draws on M3, M5, M7, M8.
+        \ts{24:27--25:13; 55:19--56:19; 1:04:52--1:10:45}
+  \item[\lensid{10}] \textbf{Check the pitfalls:}\added{} Run four checks, each drawn from a Common Pitfall
+        (Section~3, in brackets), and report each as found, quoted with its location, or not found.
+        \begin{itemize}[nosep,leftmargin=1.2em]
+          \item \emph{Background opening} (starting with background): the introduction's first paragraph has no
+                instability word. Either way, note where the first one appears.
+          \item \emph{The writers' interest as the reason} (starting with personal curiosity): a sentence gives the
+                authors' interest or aim (``we are interested in,'' ``this study aims to explore'') before the
+                introduction states any problem.
+          \item \emph{Originality as the value} (believing originality guarantees value): ``novel,'' ``new,''
+                ``first'' or ``for the first time'' is offered as the reason to read, and the same paragraph does not
+                say what it changes for readers.
+          \item \emph{Results without consequence} (expressing your thoughts instead of changing the readers'): a
+                results, discussion or conclusion paragraph says what a figure, table or case shows, and neither it
+                nor the next paragraph says what that changes for the problem (L4) or for the readers.
+        \end{itemize}
+        The fourth pitfall, writing to preserve ideas, is a belief that doesn't show in a text, so it has no
+        check. Draws on M4, M8. \ts{21:30--22:07; 25:26--30:58; 56:45--57:22}
+\end{lensfields}
+
+\subsection{For your own draft (self-check)}
+
+\begin{lensfields}
+  \item[\lensid{11}] \textbf{Count value words:}\added{} Can you circle about ten value words in your first two
+        paragraphs? If not, go back to your word bank. For a self-check status, count distinct community and
+        instability words (M6; flow words don't count): 8 or more is STRONG, 4--7 PARTIAL, 3 or fewer MISSING.
+        Draws on M1, M6. \ts{34:04--34:18}
+  \item[\lensid{12}] \textbf{Revise the opening last:}\added{} Does your first sentence state the problem the paper
+        ended up solving? Check it against L4: if a later section states the problem more sharply, the opening
+        should carry it. Writers often find their problem late, sometimes only from a final reader. Draws on M8.
+        \ts{1:18:46--1:19:39}
+\end{lensfields}
+
+\textbf{Figures and tables} are locations, not a separate field. When a figure shows the problem, the stakes or the
+value, for example the accepted view failing, cite it in that field. \tsin{1:14:53--1:15:20}
+
+\begin{panel}
+\textbf{Bonus Tip:} Maintain a personal glossary of high-value vocabulary and sentence structures from journal
+articles. \ts{33:45--34:10}
+\end{panel}
+
+\textbf{With Handout 2.} On one draft, this handout owns the opening's problem, stance, stakes and contribution (L4,
+L5, L6, L8, L12); Handout 2 (\emph{effective-writing}) then checks only the opening's sentences (EW-5--EW-10), so the
+opening is not flagged twice.
+
+% >>> ADDITIONS-BODY BEGIN (Sections 5-8)
+% =====================================================================
+\Needspace{16\baselineskip}
+\section{\texorpdfstring{Using the Lens: Dissect or Self-Check\added}{Using the Lens: Dissect or Self-Check}}
+
+The lens has two modes. Choose one before you start.
+
+\begin{panel}[breakable=false]
+\textbf{Dissect} a paper you are reading: record what it does, and where, for fields \lensid{1}--\lensid{10}.
+A dissection describes the paper; it does not grade it.\par\smallskip
+\textbf{Self-check} a draft you are writing: give every field, \lensid{1}--\lensid{12}, a status and one fix
+move.\par\smallskip
+\textbf{Status key, self-check only:}\enspace \stS{} does it\quad \stP{} partly\quad \stM{} not at all\quad
+\stN{} n/a\par\smallskip
+\textbf{Locations:} section, paragraph and the sentence's first words, e.g.\ \loc{Sec.~2 P3 ``Existing EV and
+PT\ldots''}; figures and tables by number, e.g.\ \loc{Fig.~1}.
+\end{panel}
+
+\begin{lensfields}
+  \item[R1] \textbf{Choose the mode first.} Dissect a paper you are reading; self-check a draft you are writing.
+  \item[R2] \textbf{Every finding cites a location,} written so the reader can find it: section, paragraph and the
+        sentence's first words. Where sentences are numbered, as in Section~6, sentence numbers do.
+  \item[R3] \textbf{A dissection describes; it never grades.} ``Not present'' and ``stated only in Sec.~5'' are facts
+        and may be reported; statuses and verdicts may not.
+  \item[R4] \textbf{A self-check gives each field one status and at most one fix move,} names the method behind
+        the fix (\methodid{1}--\methodid{10}), and leaves numbers, results and technical claims untouched.
+  \item[R5] \textbf{Quotes stay short.} At most one quoted sentence per finding, trimmed to about 25 words.
+  \item[R6] \textbf{Read the whole paper.}\added{} Start with the introduction, then read every section, and record
+        each finding wherever it is stated; its location shows which section that is.
+\end{lensfields}
+
+% =====================================================================
+\section{\texorpdfstring{Worked Example\added}{Worked Example}}
+
+The same short introduction is dissected below as if someone else wrote it, then self-checked as if it were your
+draft. It is a teaching text written for this handout: the paper and its Figure~1 are invented, while the
+background in P1--P2 is standard in the LES literature. It is an introduction only, so every location below is
+in the introduction.
+
+\begin{panel}[breakable=false]
+\pn{1}\sn{1}Most LES practitioners close the subgrid stress with an eddy viscosity, and in doing so they assume
+that energy flows only from the resolved scales to the subgrid scales.
+\sn{2}A priori tests on filtered DNS data have long shown that this assumption is incomplete: locally, energy
+also flows back to the resolved scales.
+\sn{3}Because a positive eddy viscosity is purely dissipative, the model cannot represent this backscatter, and
+where backscatter is strong the closure drains energy from scales that are in fact gaining it.
+\sn{4}Figure~1 makes the mismatch visible: the modeled flux is forward everywhere, while the filtered-DNS flux
+changes sign across the domain.\par\medskip
+\pn{2}\sn{1}Two lines of work have addressed backscatter, and each leaves the same question open.
+\sn{2}Stochastic models add a random forcing whose level is set to match an average backscatter rate; matching
+an average, however, says little about where reverse transfer occurs.
+\sn{3}Dynamic procedures can return a negative eddy viscosity, but the resulting instability is commonly removed
+by clipping or averaging, which discards the very events at issue.
+\sn{4}Neither approach tells a modeler where their closure is wrong.\par\medskip
+\pn{3}\sn{1}This paper gives modelers a tool for answering that question: a local diagnostic that measures the
+sign and size of interscale energy transfer at each point of a filtered field.
+\sn{2}Applied to filtered DNS of decaying isotropic turbulence, it shows where an eddy-viscosity closure removes
+energy that the flow is gaining, so modelers can test their closure where it is most likely to fail.
+\sn{3}Section~2 defines the diagnostic; Section~3 applies it.
+\end{panel}
+
+\subsection{Dissect (fields 1--10)}
+
+{\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\sffamily\bfseries}p{2.5cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{2.3cm}@{}}
+\toprule
+\normalfont\sffamily\bfseries Field & \sffamily\bfseries What the paper does & \sffamily\bfseries Where \\
+\midrule
+1- Readers      & Research community: LES modelers who close the subgrid stress with an eddy viscosity, plus
+                  stochastic modelers and users of dynamic procedures. Wider readers: not named. Venue implied:
+                  an LES or turbulence-modeling journal & \loc{P1 S1; P2 S2--S3} \\
+2- Value words  & Instability, e.g.\ ``this assumption is \textbf{incomplete}''; ``the model \textbf{cannot} represent
+                  this backscatter''; ``matching an average, \textbf{however}, says little''; ``\textbf{Neither}
+                  approach tells a modeler where their closure is \textbf{wrong}.'' Community, e.g.\ ``\textbf{Most}
+                  LES practitioners''; ``have \textbf{long shown}''; ``is \textbf{commonly} removed.'' Frame:
+                  ``[Evidence] has long shown that this assumption is incomplete''
+                & \loc{P1 S2; P1 S3; P2 S2; P2 S4; P1 S1; P1 S2; P2 S3} \\
+3- Value offered & ``so modelers can test their closure where it is most likely to fail.'' Label (interpretation):
+                  a diagnostic method & \loc{P3 S2} \\
+4- Problem      & Current state: eddy-viscosity closures assume energy flows only to the subgrid scales. Where it
+                  breaks: a dissipative closure cannot represent backscatter (Fig.~1); stochastic models match only
+                  an average rate; dynamic procedures clip the negative events. Open: where is a modeler's closure
+                  wrong? Explicit & \loc{P1 S1; P1 S2--S4; P2 S2--S3; P2 S4} \\
+5- Stance       & Direct toward the dominant practice (``incomplete''); credits both rival lines of work before
+                  naming their shared limit & \loc{P1 S2; P2 S1--S4} \\
+6- Stakes       & Cost: the closure drains energy from scales that are gaining it, stated as physics. Benefit:
+                  closures can be tested where they are most likely to fail & \loc{P1 S3; P3 S2} \\
+7- Doubts answered & Not present in the introduction & -- \\
+8- Contribution & A local diagnostic of the sign and size of interscale transfer, named as a tool & \loc{P3 S1} \\
+9- Structure    & Problem (P1), prior work that sharpens it (P2), contribution (P3); explanation deferred to
+                  Section~2; error model: both approaches share a flaw & \loc{P1--P3; P3 S3; P2 S4} \\
+10- Pitfalls    & None of the four checks found. Background opening: the first instability word,
+                  ``incomplete,'' is in P1. No aim or interest sentence; no novelty claim; results without
+                  consequence does not apply to an introduction & \loc{P1 S2} \\
+\bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+}
+
+\clearpage
+\subsection{Self-check (fields 1--12)}
+
+{\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\sffamily\bfseries}p{2.5cm}l>{\raggedright\arraybackslash}X@{}}
+\toprule
+\normalfont\sffamily\bfseries Field & \sffamily\bfseries Status & \sffamily\bfseries Evidence and fix move \\
+\midrule
+1- Readers      & \stS & Research community named in the first words; rival communities named in P2
+                         (\loc{P1 S1; P2 S2--S3}) \\
+2- Value words  & \stS & Instability words in every paragraph of the problem (\loc{P1 S2--S3; P2 S2--S4}) \\
+3- Value offered & \stS & Offered as something modelers can do (\loc{P3 S2}; M1) \\
+4- Problem      & \stS & All three parts stated: current state, where it breaks, what remains open
+                         (\loc{P1 S1--S4; P2 S2--S4}) \\
+5- Stance       & \stS & Credits both lines of work before naming their shared limit (\loc{P2 S1--S4}; M9) \\
+6- Stakes       & \stP & The cost is stated as physics, not as a cost to these readers. Say what misplaced transfer
+                         does to the predictions they care about (M2, M10) \\
+7- Doubts answered & \stM & No doubt is anticipated. Name the doubt modelers will raise, such as whether an a priori
+                         diagnostic says anything about a posteriori runs, and say where the paper answers it (M4) \\
+8- Contribution & \stS & Named as a tool these readers can use (\loc{P3 S1}; M1) \\
+9- Structure    & \stS & Problem, then prior work that sharpens it, then contribution; definitions deferred to
+                         Section~2 (M8, M7) \\
+10- Pitfalls    & \stS & None of the four checks found; the results check does not apply to an introduction \\
+11- Value count & \stS & Nine distinct value words in P1--P2 \\
+12- Opening     & \stP & \loc{P1 S1} states the readers' practice, but the question the paper answers (where is my
+                         closure wrong?) first appears in \loc{P2 S4}. Bring a version of it into P1 (M8) \\
+\bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+}
+
+{\small\textbf{Priority fix:} 6- Stakes. Readers can see that the model is wrong, but not yet what it costs them.
+Doubts answered (7-) is missing too, but readers who can't see the cost stop reading before their doubts matter.\par}
+
+% =====================================================================
+\clearpage
+\section{\texorpdfstring{Worksheet\added}{Worksheet}}
+
+\renewcommand{\arraystretch}{1.6}
+\begin{tabularx}{\linewidth}{@{}>{\sffamily\small\bfseries}p{3.4cm}X@{}}
+Text analyzed       & \hrulefill \\
+Mode                & Dissect \enspace / \enspace Self-check \\
+Readers (L1)        & \hrulefill \\
+\end{tabularx}
+
+\renewcommand{\arraystretch}{1.9}
+{\small
+\begin{tabularx}{\linewidth}{@{}|l|X|p{2.3cm}|p{1.5cm}|X|@{}}
+\hline
+\sffamily\bfseries ID & \sffamily\bfseries Finding (what the text does) & \sffamily\bfseries Location
+  & \sffamily\bfseries Status & \sffamily\bfseries Fix move (self-check) \\ \hline
+L1  & & & & \\ \hline
+L2  & & & & \\ \hline
+L3  & & & & \\ \hline
+L4  & & & & \\ \hline
+L5  & & & & \\ \hline
+L6  & & & & \\ \hline
+L7  & & & & \\ \hline
+L8  & & & & \\ \hline
+L9  & & & & \\ \hline
+L10 & & & & \\ \hline
+L11 & & & & \\ \hline
+L12 & & & & \\ \hline
+\end{tabularx}
+}
+\renewcommand{\arraystretch}{1}
+
+{\small Status is for self-check only; leave it blank when dissecting (R3). L11 and L12 apply to your own draft.}
+
+\textbf{Reusable frames} (L2): \hrulefill\par
+\vspace{4pt}\hrulefill\par
+\textbf{Priority fix} (self-check): \hrulefill
+
+% =====================================================================
+\Needspace{27\baselineskip}
+\section{\texorpdfstring{Report Format for Skills and Reviewers\added}{Report Format for Skills and Reviewers}}
+
+Reports produced from this handout, by a person or by a skill, use this layout so they can be compared and
+cited. A skill writes it in ordinary chat formatting: bold labels and a table, not a code block.
+
+\begin{panel}[breakable=false]
+\small
+\begin{verbatim}
+McEnerney-lens report - Dissect | Self-check
+Text      : title, venue, sections read
+Readers   : research community; wider readers
+Labels    : "1- Readers" to "12- Opening", never the IDs; cells up to
+            about 60 words, "4- Problem" about 40 for each of its parts
+
+DISSECT    : table | Field | What the paper does | Where |, rows 1- to 10-,
+             then tables "2- Value words in context" and "10- Pitfalls"
+             "Not present" and "stated only in Sec. n" are facts; no statuses
+
+SELF-CHECK : the same two tables, then | Field | Status | Evidence and fix move |
+             one row per field, 1- to 12-: STRONG|PARTIAL|MISSING|N/A,
+             evidence with its location, fix (M<n>)
+             Priority fix: the one field that most limits value, and why
+             Untouched   : numbers, results and technical claims are not changed
+
+Where     : section, paragraph and the sentence's first words (R2)
+\end{verbatim}
+\end{panel}
+% <<< ADDITIONS-BODY END
+
+% =====================================================================
+\section{References}
+\enlargethispage{1\baselineskip}% keeps the closing notes on the same page
+
+{\small
+\renewcommand{\section}[2]{}%  suppress the bibliography's own heading
+\begin{thebibliography}{9}\setlength{\itemsep}{0pt}\raggedright
+
+\bibitem{mcenerney2014}
+L.~McEnerney, \emph{Leadership Lab: The Craft of Writing Effectively}, lecture, University of Chicago Writing
+Program. Recording posted by UChicago Social Sciences on YouTube, 26 June 2014.
+\url{https://youtu.be/vtIzMaLkCaM}
+
+\bibitem{sewell1996}
+W.~H. Sewell Jr., ``Historical events as transformations of structures: Inventing revolution at the Bastille,''
+\emph{Theory and Society}, 25(6), 841--881, 1996. doi:10.1007/BF00159818. (The ``Ever since Herodotus''
+opening: a problem built in the first paragraph, with its two reader communities named.)
+
+% TODO(verify): end page of the Tutino article; only the volume,
+% issue and first page (78(3), 367) were confirmed when this was compiled.
+\bibitem{tutino1998}
+J.~Tutino, ``The revolution in Mexican independence: Insurgency and the renegotiation of property, production,
+and patriarchy in the Baj\'{\i}o, 1800--1855,'' \emph{Hispanic American Historical Review}, 78(3), 367ff.,
+August 1998. (An opening that directly challenges an entrenched view; its first footnote shows readers
+helping the author find his problem.)
+
+\bibitem{said1978}
+E.~W. Said, \emph{Orientalism}, Pantheon Books, 1978. (Its introduction is McEnerney's extended example of a
+writer defining several communities of readers.)
+
+\bibitem{lyotard1984}
+J.-F. Lyotard, \emph{The Postmodern Condition: A Report on Knowledge} (1979), trans. G.~Bennington and
+B.~Massumi, Manchester University Press, 1984, section~1. (The passage on knowledge becoming exterior to the
+knower and taking the form of a commodity.)
+
+\bibitem{wittgenstein1953}
+L.~Wittgenstein, \emph{Philosophical Investigations}, Blackwell, 1953. (McEnerney's ``what something means is
+what it does'': meaning as use.)
+
+\bibitem{vrijenhoek1979}
+R.~C. Vrijenhoek, ``Factors affecting clonal diversity and coexistence,'' \emph{American Zoologist}, 19,
+787--797, 1979. (Background to the frozen niche-variation model named in the lecture's 1A/1B biology example;
+the two example paragraphs are teaching texts.)
+
+\bibitem{booth}
+W.~C. Booth, G.~G. Colomb and J.~M. Williams, \emph{The Craft of Research}, University of Chicago Press (4th ed.,
+2016, with J.~Bizup and W.~T. FitzGerald). (Further reading, not named in the lecture: Colomb and Williams
+developed the course McEnerney teaches, and the book treats research problems at length.)
+
+\end{thebibliography}
+
+\textbf{Not identified in the recording:} the ``why people write essays'' passage McEnerney criticizes (he calls
+it a caricature written for high-school students) \tsin{44:29--49:22}, and the economists' introduction he praises
+on pages 16--17 of his printed handout \tsin{1:14:34--1:15:34}.
+
+\textbf{See also:} Handout 2 (\emph{effective-writing}) applies the same reader-value idea to single paragraphs.
+}
+
+\end{document}

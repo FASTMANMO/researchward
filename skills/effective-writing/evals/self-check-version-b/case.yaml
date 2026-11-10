@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: self-check-version-b
+expected_outcome: |
+  A SELF-CHECK report that matches the Version B column of Handout 2,
+  Section 4, as settled on 25 Oct 2026: EW-3 PARTIAL (S3 states the cost
+  as physics, not as a cost to these readers, the same standard as
+  Handout 1's L6), EW-5 PARTIAL (S4's subject is "this paper"), and every
+  other criterion STRONG. The priority fix is EW-3, every finding cites
+  sentence numbers, and the paragraph is not rewritten.

@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: dissect-after-drift
+expected_outcome: |
+  The fixed report format holds late in a conversation. The input
+  earlier-chat.md is an earlier conversation (a made-up wall-model paper)
+  whose report has drifted: it prints field IDs (L1...), runs long, and
+  adds an "Overall assessment" verdict and a "Key takeaways" section,
+  followed by a long discussion. The new DISSECT report on intro.md must
+  follow the skill's template, not the earlier report: number-and-name
+  labels, exactly ten rows, cells within their word limits, the two
+  side tables within their limits, no verdict and no extra sections.
+context:
+  scaffold_script: place-files.sh

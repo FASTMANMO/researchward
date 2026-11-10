@@ -1,0 +1,551 @@
+% =====================================================================
+%  effective-writing-handout.tex
+%  Handout 2 -- Writing for Readers: Paragraph Analysis Criteria
+%
+%  Source: L. McEnerney, "Leadership Lab: Writing Beyond the Academy",
+%          University of Chicago, 23 Jan 2015 (recorded lecture).
+%  Pairs with Handout 1 (mcenerney-lens): that handout checks a paper's
+%  problem and positioning; this one checks a single paragraph.
+%
+%  REPO NOTES
+%  - Criterion IDs (EW-1 ... EW-10), principle IDs (P1 ... P7) and
+%    ground-rule IDs (G1 ... G5) are stable. Skills and reports cite
+%    them, so never renumber: append new IDs at the end instead.
+%  - Time stamps (h:mm:ss) point to the recorded lecture so every
+%    criterion can be traced back to where it is taught.
+%  - Compiles with pdfLaTeX on Overleaf (TeX Live 2020 or later).
+%    For A4 paper, change "letterpaper" in the geometry line.
+%  - 25 Oct 2026, settled with Handout 1 for the skills repo: EW-3 judges
+%    stakes as Handout 1's stakes field does (a cost to these readers), so Version
+%    B's EW-3 is PARTIAL; G6 (someone else's paragraph) appended;
+%    P1 S3 labels for several paragraphs; Mode line and the covered-by-
+%    lens line in the report; the title block says what each handout
+%    leaves to the other. In Version B, S3's "it drains" became "the
+%    closure drains", because "it" first read as backscatter. EW-3's
+%    Check names the readers' predictions, results or decisions.
+%  - 6 Nov 2026: cross-references follow Handout 1's renumbered fields
+%    (problem L4, stance L5, stakes L6, contribution L8, opening L12).
+% =====================================================================
+
+\documentclass[11pt]{article}
+
+% ---------- Fonts and encoding ---------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}                 % body: Bitstream Charter
+\usepackage[scaled=0.90]{helvet}     % sans: Helvetica clone for headings
+\usepackage{microtype}
+
+% ---------- Page layout ----------------------------------------------
+\usepackage[letterpaper,margin=0.9in,headheight=14pt]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{array,tabularx,booktabs}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Writing for Readers: Paragraph Analysis Criteria (Handout 2)}, pdfauthor={Mohammed Meligy}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+% ---------- Colours --------------------------------------------------
+\definecolor{ink}{HTML}{1F2328}
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{muted}{HTML}{5B6B7D}
+\definecolor{rulec}{HTML}{C9D3DF}
+\definecolor{fill}{HTML}{F2F5F9}
+\definecolor{strongc}{HTML}{2E6B3F}
+\definecolor{partialc}{HTML}{9A6700}
+\definecolor{missingc}{HTML}{A33A2B}
+\color{ink}
+
+% ---------- Headings -------------------------------------------------
+\titleformat{\section}{\sffamily\large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\sffamily\normalsize\bfseries\color{ink}}{}{0em}{}
+\titlespacing*{\section}{0pt}{16pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+
+% ---------- Header and footer ----------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{rulec}\hrule height\headrulewidth}
+\fancyhead[L]{\sffamily\footnotesize\color{muted}Writing for Readers \textperiodcentered{} Paragraph Analysis Criteria}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}effective-writing}
+\fancyfoot[C]{\sffamily\footnotesize\color{muted}\thepage}
+
+% ---------- Small helpers --------------------------------------------
+\newcommand{\ts}[1]{{\sffamily\footnotesize\color{muted}[#1]}}        % lecture time stamp
+\newcommand{\sn}[1]{\textsuperscript{\sffamily\bfseries\color{accent}S#1}\,} % sentence label in example text
+\newcommand{\sref}[1]{{\sffamily\footnotesize\bfseries\color{accent}S#1}}     % sentence reference in running text
+\newcommand{\srange}[2]{{\sffamily\footnotesize\bfseries\color{accent}S#1--S#2}}
+\newcommand{\id}[1]{{\sffamily\bfseries\color{accent}#1}}              % ID in running text
+\newcommand{\badge}[2]{{\setlength{\fboxsep}{1.6pt}\colorbox{#1}{\sffamily\scriptsize\bfseries\color{white}\strut#2}}}
+\newcommand{\stS}{\badge{strongc}{MET}}
+\newcommand{\stP}{\badge{partialc}{PARTLY MET}}
+\newcommand{\stM}{\badge{missingc}{NOT MET}}
+\newcommand{\stN}{\badge{muted}{DOES NOT APPLY}}
+
+% Lists
+\setlist{itemsep=2pt,parsep=0pt,topsep=3pt}
+\newlist{principles}{description}{1}
+\setlist[principles]{style=multiline,leftmargin=2.6em,font=\sffamily\bfseries\color{accent}}
+\newlist{fields}{description}{1}
+\setlist[fields]{style=multiline,leftmargin=5.4em,font=\sffamily\small\bfseries\color{muted},itemsep=4pt,topsep=2pt}
+
+% Criterion card:  \begin{criterion}{ID}{Title}{time stamps} ... \end{criterion}
+\newtcolorbox{criterion}[3]{%
+  enhanced,
+  colback=white, colframe=rulec, boxrule=0.6pt, arc=2pt,
+  colbacktitle=fill, coltitle=ink, toptitle=3pt, bottomtitle=3pt,
+  left=8pt, right=8pt, top=5pt, bottom=5pt,
+  fonttitle=\sffamily\bfseries,
+  title={\textcolor{accent}{#1}\quad #2\hfill{\mdseries\footnotesize\color{muted}#3}},
+  before skip=9pt, after skip=9pt}
+
+% Plain shaded panel for notes and examples
+\newtcolorbox{panel}[1][]{%
+  enhanced, breakable, colback=fill, colframe=fill, arc=2pt,
+  left=10pt, right=10pt, top=7pt, bottom=7pt,
+  before skip=8pt, after skip=8pt, #1}
+
+% =====================================================================
+\begin{document}
+
+% ---------- Title block ----------------------------------------------
+{\sffamily\footnotesize\bfseries\color{muted}HANDOUT 2 \textperiodcentered{} EFFECTIVE-WRITING}\par\vspace{2pt}
+{\sffamily\LARGE\bfseries Writing for Readers: Paragraph Analysis Criteria}\par\vspace{3pt}
+{\sffamily\small\bfseries Mohammed Meligy}{\sffamily\small\color{muted}\ \textperiodcentered{} Mechanical and Aerospace Engineering, Arizona State University \textperiodcentered{} \textcopyright{} 2026, CC BY 4.0}\par\vspace{3pt}
+{\small\color{muted}Compiled from \emph{Writing Beyond the Academy}, a Leadership Lab lecture by Larry McEnerney
+(University of Chicago Writing Program), 23 January 2015. Unofficial study handout: the lecture's ideas are
+paraphrased, and time stamps such as \ts{1:08:46} point to the recording. Pairs with Handout~1
+(\emph{mcenerney-lens}), which checks a whole paper; used together on one draft, Handout~1 owns the opening's
+problem, stance, stakes and contribution (L4, L5, L6, L8, L12) and this handout checks only its sentences
+(\id{EW-5}--\id{EW-10}).}\par
+\vspace{4pt}{\color{rulec}\rule{\linewidth}{0.6pt}}
+
+\begin{panel}
+\textbf{How to use this handout.}
+\begin{enumerate}[leftmargin=1.6em]
+  \item Fill in the \emph{reader card} (Section~2). No criterion can be judged without it.
+  \item Number the sentences of your paragraph \sref{1}, \sref{2}, \sref{3}, \ldots{} For several paragraphs,
+        label them too: P1~S1, P2~S3.
+  \item Run criteria \id{EW-1} to \id{EW-10} in order. Give each a status and point to the sentences behind it.
+        If you already ran Handout~1 on this draft, mark \id{EW-1}--\id{EW-4} for its opening paragraph
+        ``covered by the lens'' and run \id{EW-5}--\id{EW-10} there.
+  \item Fix the one criterion that most limits value first, usually \id{EW-1}--\id{EW-3}, before polishing sentences.
+\end{enumerate}
+\textbf{Someone else's paragraph:} say whether each criterion is met and what the paragraph does, with sentence
+numbers; give no fix move (G6).\par\smallskip
+\textbf{Status key:}\enspace \stS{}\quad \stP{}\quad \stM{}\quad \stN{}\quad (Handout~1: STRONG, PARTIAL, MISSING, N/A)
+\end{panel}
+
+% =====================================================================
+\section{The idea behind the criteria}
+
+In school, readers were paid to read you: teachers read your writing to assess what you know. After school,
+nobody is paid to care about you. Readers read only while the text is valuable to them, and they stop when it
+isn't. The job of a text you send is to change what its readers think, do or decide, and the readers are the ones
+who judge whether it did. Every criterion below follows from that. \ts{11:21--18:50}
+
+\begin{principles}
+  \item[P1] \textbf{Value is the quality that matters.} Clear, organized and persuasive writing serves value; it
+        does not replace it. \ts{5:50}
+  \item[P2] \textbf{No rule about a text makes sense until you say who reads it and what it is for.}
+        ``Use short sentences,'' ``avoid the passive,'' ``don't start with \emph{And},'' ``no jargon'' are
+        techniques, not rules. Spelling is the one exception. \ts{7:26; 34:07}
+  \item[P3] \textbf{Language is a technique for controlling the reader's reading process.} \ts{37:53}
+  \item[P4] \textbf{Readers read in time.} When the text gets in the way they slow down, then misunderstand, then
+        get annoyed, then stop. \ts{28:35}
+  \item[P5] \textbf{Readers don't trust you.} They expect you to waste their time, so each sentence has to earn
+        the next one. \ts{1:04:45}
+  \item[P6] \textbf{Change their heads; don't reveal yours.} School trained you to demonstrate knowledge. That
+        habit is the main obstacle. \ts{1:01:45; 1:15:45}
+  \item[P7] \textbf{Think by writing, then revise for readers.} Drafting to discover your ideas is good. The
+        criteria apply to the text you send, not to the draft you think with. \ts{9:54}
+\end{principles}
+
+% =====================================================================
+\section{Before you analyze: the reader card}
+
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\linewidth}{@{}>{\sffamily\small\bfseries}p{3.4cm}X@{}}
+\toprule
+Readers            & Who, specifically, will read this? A journal's community, a reviewer, a committee, a client. \\
+Current belief     & What do they already think, assume or do that this paragraph touches? \\
+What they value    & What would make reading this worth their time? \\
+Function           & After this paragraph, what should they think, do or decide differently? \\
+Reading conditions & At a desk or skimming? Will they get to the end of a long sentence? \\
+\bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+
+\subsection{Ground rules for whoever analyzes (writer, colleague or AI)}
+\begin{principles}
+  \item[G1] \textbf{No finding without the reader card.} If the readers or the function are unknown, ask, or
+        state the assumption you used.
+  \item[G2] \textbf{Never report a text rule as a finding on its own.} Translate it into a reader effect: not
+        ``uses the passive voice'' but ``the subject of \sref{3} is the apparatus, while these readers care about
+        what it measured.''
+  \item[G3] \textbf{Every finding cites sentence numbers.}
+  \item[G4] \textbf{Judge concision by the reader's processing time, not by word count.}
+  \item[G5] \textbf{Diagnose first; suggest one fix move per criterion.} Keep the writer's content, terminology,
+        numbers and technical claims intact.
+  \item[G6] \textbf{Someone else's paragraph gets no fixes.} When the text is not the user's, say whether each
+        criterion is met and what the paragraph does, with sentence numbers, but give no fix move and no priority
+        fix: it isn't the user's to revise.
+\end{principles}
+
+% =====================================================================
+\section{The criteria}
+
+\subsection{\texorpdfstring{A.\enspace}{A. }Value: does the paragraph give readers a reason to read?}
+
+\enlargethispage{2\baselineskip}% room for the author line on page 1, so EW-1 stays on page 2
+\begin{criterion}{EW-1}{The reader's role in the opening}{39:48--47:37; 1:03:04}
+\begin{fields}
+  \item[Ask] Does the first sentence give the reader a role, or only announce a topic?
+  \item[Check] Place \sref{1} on the opening ladder:\\[2pt]
+    \begin{tabular}{@{}>{\sffamily\bfseries\color{accent}}l l@{}}
+      L0 & says what the text is \emph{about} (the reader has no role) \\
+      L1 & says what the text \emph{argues} \\
+      L2 & says what \emph{question} the text answers \\
+      L3 & names the question the \emph{readers} have, or ought to have \\
+    \end{tabular}
+  \item[Red flags] ``This paper/section/paragraph discusses, outlines, presents, describes\ldots''; opening on
+    background or definitions; the writer as the only actor in the sentence.
+  \item[Fix] Rewrite \sref{1} so it starts from the readers' situation: what they think, what they need, or what
+    they asked.
+  \item[Applies] Any paragraph; essential for the first paragraph of a paper, section or memo.
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-2}{The readers' belief, named and challenged}{49:11--55:12}
+\begin{fields}
+  \item[Ask] Does the paragraph say what the readers currently think, and why that is incomplete or wrong?
+    Outside the academy the move is often different: say what the readers need, and that this text supplies it.
+  \item[Check] Find the sentence that states the community's assumption or practice. Then find the turn:
+    \emph{however, but, unrealistic, it is claimed, incomplete, inconsistent}.
+  \item[Red flags] The paragraph describes the world, not the readers' understanding of it. A turn word with
+    nothing before it to turn against.
+  \item[Fix] Add one sentence that states the readers' view fairly, then make the turn.
+  \item[Note] Most academic writing makes this move, usually politely. McEnerney's estimate is 85--95\% of it:
+    in effect, ``I know what you think, and you're wrong.''
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-3}{Stakes and urgency}{55:12--1:00:02}
+\begin{fields}
+  \item[Ask] Can these readers tell what it costs \emph{them} if they ignore this, or what they gain if they act
+    on it?
+  \item[Check] Name the cost in one phrase, as a cost to the readers on the reader card. A consequence stated
+    only as a fact about the world (a physical effect, a number) is only partly met until it is tied to something these
+    readers care about, such as their predictions, results or decisions. Then circle the words that carry tension (\emph{fails, cannot, error, risk, crisis}).
+  \item[Red flags] Neutral placeholders: \emph{situation, aspects, implications, issues, has been studied}. A
+    paragraph in which nothing is at risk.
+  \item[Fix] Replace the neutral noun with the concrete cost: what breaks, for whom, and how badly.
+  \item[Note] Readers are drawn to instability and trouble. ``Yesterday, nothing changed'' is not a headline.
+    Handout~1 judges stakes the same way (L6).
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-4}{Words that signal value}{48:05--49:04}
+\begin{fields}
+  \item[Ask] Do the words that describe your contribution tell readers they can use it?
+  \item[Check] Circle every noun that names what you offer. Sort them into \emph{use} words (tool, method,
+    test, criterion, diagnostic, a model that predicts\ldots) and \emph{display} words (ideas, concepts,
+    thoughts, discussion, overview, insights).
+  \item[Red flags] The contribution is described only with display words, or only as an activity (``X is
+    analyzed'').
+  \item[Fix] Name what the reader can do with it.
+\end{fields}
+\end{criterion}
+
+\subsection{\texorpdfstring{B.\enspace}{B. }Sentences: is the value where readers look for it?}
+
+\begin{criterion}{EW-5}{Focus: subjects carry what readers care about}{1:05:45--1:15:45}
+\begin{fields}
+  \item[Ask] Are the grammatical subjects the things these readers want to think about?
+  \item[Check] Underline the subject of each sentence; in English it is the focus about four times in five.
+    List the subjects in order. Do the readers care about each one? Do the subjects stay on one line of interest?
+  \item[Red flags] Subjects that are the writer's apparatus (\emph{this study, the authors, the code,
+    Section~3}) when readers care about the phenomenon. Subjects that jump between unrelated things.
+  \item[Fix] Move what the readers care about into subject position. ``The dog chased the cat'' and ``The cat
+    was chased by the dog'' are equally good until you know whether the readers are thinking about the cat.
+  \item[Note] The same opening can focus on \emph{studies of} a topic, on \emph{the topic itself}, or on
+    \emph{its readers}; McEnerney shows three such versions of one paragraph. Choose by readers, not taste.
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-6}{Stress: endings carry what matters}{30:35--33:06; 1:08:46}
+\begin{fields}
+  \item[Ask] Do the ends of sentences hold the information you most want readers to notice?
+  \item[Check] Circle the last few words of each sentence and read only the circled words, in order. Is that the
+    paragraph's message?
+  \item[Red flags] Endings that hold hedges, citations, locations (\emph{in this context, as shown in Fig.~3})
+    or old information. A run of short sentences that stresses everything equally, so nothing stands out.
+  \item[Fix] Move new, important information to the end. Use longer sentences with lesser stresses that build
+    toward the main one.
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-7}{Value along the way}{29:29--30:29}
+\begin{fields}
+  \item[Ask] In a long sentence, does the reader get something before the end?
+  \item[Check] For each long sentence, mark the first point where the reader gains something. If the payoff
+    comes only at the end, ask whether these readers will get there (reader card: reading conditions).
+  \item[Red flags] Several lines of setup before the point, in a venue read quickly or on screen.
+  \item[Fix] Bring an early payoff forward, or split the sentence. Shortness is not the goal: a long sentence
+    that pays off as it goes is fine anywhere.
+  \item[Note] Readers of a specialist journal will often reach the end of a long sentence; general readers
+    often won't.
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-8}{Concision as processing time}{1:06:46--1:08:24}
+\begin{fields}
+  \item[Ask] Will the reader have to process any sentence twice?
+  \item[Check] Mark sentences where the reader must re-sort who did what, hold the subject across a long
+    interruption before the verb, or flip the focus to the thing they care about.
+  \item[Red flags] Active or passive chosen by rule rather than by focus. Nominalizations that hide the actor.
+    A short sentence that still forces a reread.
+  \item[Fix] Rebuild the sentence around the reader's focus, even if it gets a few words longer.
+\end{fields}
+\end{criterion}
+
+\subsection{\texorpdfstring{C.\enspace}{C. }Reading process: does the paragraph keep readers reading?}
+
+\begin{criterion}{EW-9}{Reading friction}{27:43--29:29; 6:43}
+\begin{fields}
+  \item[Ask] Where would a target reader first slow down?
+  \item[Check] Mark the first friction point and name its cause: a term these readers don't use, jargon that
+    adds nothing for them, an ambiguity, or a missing link between sentences.
+  \item[Red flags] ``It's the reader's job to read it.'' Jargon judged by a rule rather than by the readers.
+  \item[Fix] Fix the first friction point first. Keep the jargon these readers use and value; explain or cut the
+    rest.
+  \item[Note] A friction-free paragraph can still have no value. Ease is not the goal; it only keeps readers
+    reading long enough to find the value.
+\end{fields}
+\end{criterion}
+
+\begin{criterion}{EW-10}{Changing versus demonstrating}{11:21--12:25; 1:01:45}
+\begin{fields}
+  \item[Ask] Does each sentence change what the readers think, or only show what the writer knows?
+  \item[Check] Tag each sentence \textbf{C} (moves the reader's thinking or decision) or \textbf{D}
+    (demonstrates knowledge, method or effort).
+  \item[Red flags] A paragraph of D sentences. Method recital or background with no consequence for the reader.
+    ``It is well known that\ldots'' with nothing done to it.
+  \item[Fix] Connect each D sentence to a change (why should these readers care that you know this?), or cut it.
+\end{fields}
+\end{criterion}
+
+% =====================================================================
+\clearpage
+\section{Worked example}
+
+\textbf{Reader card.} \emph{Readers:} LES modelers who use eddy-viscosity closures. \emph{Current belief:} the
+subgrid model's job is to drain energy from the resolved scales. \emph{Value:} knowing where their closure will
+fail. \emph{Function:} test the closure in the regions where it is weakest.
+
+\begin{panel}[breakable=false]
+\textbf{Version A}\quad
+\sn{1}This section discusses subgrid-scale modeling in large-eddy simulation (LES) of turbulent flows.
+\sn{2}Subgrid-scale models represent the effect of the unresolved scales on the resolved field.
+\sn{3}The Smagorinsky model, which relates the subgrid stress to the resolved strain rate through an eddy
+viscosity, is widely used.
+\sn{4}In this work, the energy transfer between resolved and subgrid scales is analyzed using filtered DNS data.
+\end{panel}
+
+\begin{panel}[breakable=false]
+\textbf{Version B}\quad
+\sn{1}Most LES practitioners close the subgrid stress with an eddy viscosity, and in doing so they assume that
+energy flows only from the resolved scales to the subgrid scales.
+\sn{2}A priori tests on filtered DNS data show that this assumption is incomplete: locally, energy also flows
+back to the resolved scales.
+\sn{3}Because a positive eddy viscosity is purely dissipative, the model cannot represent this backscatter, and
+where backscatter is strong the closure drains energy from scales that are in fact gaining it.
+\sn{4}This paper gives modelers a tool for locating those regions, so that they can test their closure where it
+is most likely to fail.
+\end{panel}
+
+{\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\sffamily\footnotesize\bfseries}p{3.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Criterion & \sffamily\footnotesize\bfseries Version A & \sffamily\footnotesize\bfseries Version B \\
+\midrule
+1- Opening gives readers a role & \stM{} \sref{1} only names a topic: ``This section discusses\ldots''
+               & \stS{} \sref{1} starts from the readers' practice; \sref{4} points to their question: where does my closure fail? \\
+2- Names and challenges what readers believe & \stM{} \sref{3} notes the practice (``widely used''), but nothing turns against it
+               & \stS{} \sref{1} states the assumption; \sref{2} turns: ``incomplete'' \\
+3- Shows what is at stake for readers & \stM{} Nothing is at risk
+               & \stP{} \sref{3} states the cost as physics, not as a cost to these readers \\
+4- Offers something readers can use & \stM{} The contribution is an activity: ``is analyzed''
+               & \stS{} \sref{4}: ``a tool for locating'' \\
+5- Sentence subjects are what readers care about & \stP{} Subjects: this section, subgrid-scale models, the Smagorinsky model, the energy transfer. The
+                 writer's frame, not the readers' problem
+               & \stP{} In \srange{1}{3} the subjects follow the readers (practitioners, the DNS evidence, the model).
+                 In \sref{4} the subject is ``this paper''; ``modelers'' would keep the focus on them \\
+6- Sentence endings carry the key point & \stP{} \sref{4} ends on method: ``filtered DNS data''
+               & \stS{} Endings build: resolved scales $\to$ gaining it $\to$ most likely to fail \\
+7- Long sentences pay off early & \stN{} The sentences are short
+               & \stS{} \sref{1} and \sref{3} are long but pay off in their first clause \\
+8- No sentence needs a reread & \stP{} \sref{3} holds its subject across a 14-word clause before the verb
+               & \stS{} No sentence needs a reread \\
+9- Nothing slows readers down & \stS{} Easy to read, and just as easy to stop reading
+               & \stS{} \emph{A priori test} and \emph{backscatter} are terms these readers use \\
+10- Changes what readers think, not only shows knowledge & \stM{} \srange{1}{4} show what the writer knows; none changes what readers think or do
+               & \stS{} Each sentence moves readers toward testing their closure \\
+\bottomrule
+\end{tabularx}
+\renewcommand{\arraystretch}{1}
+}
+
+{\small \textbf{Neither version is right in the abstract.} Version B works for readers who use eddy-viscosity
+closures. For readers who don't, \sref{1} describes someone else's belief and the paragraph loses its hold on
+them (G1). B is also longer than A: concision is about the reader's time, not the word count (G4).\par}
+
+% =====================================================================
+\clearpage
+\section{Worksheet}
+
+\textbf{Reader card}\par
+\renewcommand{\arraystretch}{1.6}
+\begin{tabularx}{\linewidth}{@{}>{\sffamily\small\bfseries}p{3.4cm}X@{}}
+Readers            & \hrulefill \\
+Current belief     & \hrulefill \\
+What they value    & \hrulefill \\
+Function           & \hrulefill \\
+Reading conditions & \hrulefill \\
+\end{tabularx}
+
+\textbf{Sentence map} (\id{EW-5}, \id{EW-6}, \id{EW-9}, \id{EW-10})\par
+\renewcommand{\arraystretch}{1.9}
+{\small
+\begin{tabularx}{\linewidth}{@{}|c|X|c|X|c|c|X|@{}}
+\hline
+\sffamily\bfseries S & \sffamily\bfseries Subject (focus) & \sffamily\bfseries Care? & \sffamily\bfseries Last words (stress)
+  & \sffamily\bfseries Key? & \sffamily\bfseries C/D & \sffamily\bfseries Friction \\ \hline
+1 & & & & & & \\ \hline
+2 & & & & & & \\ \hline
+3 & & & & & & \\ \hline
+4 & & & & & & \\ \hline
+5 & & & & & & \\ \hline
+6 & & & & & & \\ \hline
+\end{tabularx}
+}
+
+\textbf{Criteria} \hfill {\small Opening level (\id{EW-1}):\enspace L0 \enspace L1 \enspace L2 \enspace L3}\par
+{\small
+\begin{tabularx}{\linewidth}{@{}|l|c|X|X|@{}}
+\hline
+\sffamily\bfseries ID & \sffamily\bfseries Status & \sffamily\bfseries Evidence (S\#) & \sffamily\bfseries Fix move \\ \hline
+EW-1  & & & \\ \hline
+EW-2  & & & \\ \hline
+EW-3  & & & \\ \hline
+EW-4  & & & \\ \hline
+EW-5  & & & \\ \hline
+EW-6  & & & \\ \hline
+EW-7  & & & \\ \hline
+EW-8  & & & \\ \hline
+EW-9  & & & \\ \hline
+EW-10 & & & \\ \hline
+\end{tabularx}
+}
+\renewcommand{\arraystretch}{1}
+
+\textbf{Priority fix} (the one criterion that most limits value, and why): \hrulefill\par
+\vspace{4pt}\hrulefill
+
+% =====================================================================
+\section{Report format for skills and reviewers}
+
+Analyses produced from this handout, by a person or by a skill, use this layout so they can be compared and
+cited.
+
+\begin{panel}[breakable=false]
+\footnotesize
+\begin{verbatim}
+Effective-writing report - Self-check | Dissect (someone else's paragraph, G6)
+Reader card : readers | current belief | value | function | conditions
+              (say which fields were assumed)
+Paragraph   : exactly as given, one sentence per line: S1, S2, ... (P1 S1 ...)
+Labels      : "1- Opening gives readers a role" to "10- Changes what readers
+              think, not only shows knowledge"; plain words throughout, no IDs,
+              codes or abbreviations: the report must make sense without this handout
+Table       : all ten criteria, in order, in three columns
+  SELF-CHECK  | Criterion | Met? | What the paragraph does (citing S#) |
+  DISSECT     the same table; no How to fix and no Priority fix
+  COVERED     after Handout 1, rows 1- to 4- read "Covered by the lens report"
+How to fix  : one line per criterion partly met or not met (self-check)
+Priority fix: the one criterion that most limits value, and why (self-check)
+Untouched   : numbers, results and technical claims are not changed
+\end{verbatim}
+\end{panel}
+
+% =====================================================================
+\section{Common pitfalls}
+
+\begin{itemize}[leftmargin=1.4em]
+  \item Opening with what the text is \emph{about} instead of the readers' situation (\id{EW-1}).
+  \item Explaining what you know instead of changing what the readers think (\id{EW-10}).
+  \item Writing for an imagined general reader, or ``for sixth graders,'' instead of the actual community and
+        what it values \ts{52:00}.
+  \item Treating text rules as laws, and their violations as errors (P2, G2).
+  \item Assuming readers will read to the end, or that they trust you to make it worth it (P4, P5).
+  \item Neutral vocabulary that drains urgency from a real problem (\id{EW-3}).
+  \item Asking which version of a paragraph is ``best'' without naming its readers (G1).
+\end{itemize}
+
+% =====================================================================
+\section{References}
+\enlargethispage{2\baselineskip}% keeps the references on the same page
+
+{\small
+\renewcommand{\section}[2]{}%  suppress the bibliography's own heading
+\begin{thebibliography}{9}\setlength{\itemsep}{0pt}\raggedright
+
+\bibitem{mcenerney2015}
+L.~McEnerney, \emph{Leadership Lab: Writing Beyond the Academy}, lecture, University of Chicago,
+23 January 2015. Posted on YouTube by UChicago Social Sciences, 18 February 2015:
+{\urlstyle{same}\url{https://youtu.be/aFwVf5a3pZM}}.
+
+\bibitem{myerson2000}
+R.~B. Myerson, ``Large Poisson games,'' \emph{Journal of Economic Theory}, 94(1), 7--45, 2000.
+doi:10.1006/jeth.1998.2453. (Example 1 in the lecture.)
+
+\bibitem{gehlbach2014}
+S.~Gehlbach, R.~Myerson and T.~Mylovanov, ``A way forward for Ukraine,'' \emph{The New York Times},
+19 March 2014. (Example 2.)
+
+\bibitem{myerson-jcr}
+R.~B. Myerson, ``A field manual for the cradle of civilization: Theory of leadership and lessons of Iraq,''
+\emph{Journal of Conflict Resolution}, 53(3), 470--482, 2009. (Example 3.)
+
+\bibitem{williams1981}
+J.~M. Williams, ``The phenomenology of error,'' \emph{College Composition and Communication}, 32(2),
+152--168, 1981. (The article with about 100 planted errors that McEnerney describes; Williams is the
+mentor he mentions.)
+
+\bibitem{lincoln1865}
+A.~Lincoln, Second Inaugural Address, 4 March 1865. (Final sentence used for the stress example.)
+
+\bibitem{wittgenstein1953}
+L.~Wittgenstein, \emph{Philosophical Investigations}, Blackwell, 1953. (Source of ``form of life'' and
+``language game.'')
+
+\bibitem{gopen1990}
+G.~D. Gopen and J.~A. Swan, ``The science of scientific writing,'' \emph{American Scientist}, 78(6), 550--558,
+1990. (Further reading, not named in the lecture: the standard written source for \id{EW-5} and \id{EW-6}.)
+
+\bibitem{williams-style}
+J.~M. Williams, \emph{Style: Lessons in Clarity and Grace}, Pearson; many editions, later ones with J.~Bizup.
+(Further reading, not named in the lecture.)
+
+\end{thebibliography}
+
+}
+
+\end{document}

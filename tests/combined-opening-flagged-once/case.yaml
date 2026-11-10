@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: combined-opening-flagged-once
+expected_outcome: |
+  Both skills run on one draft and the opening is flagged once. First a
+  McEnerney-lens SELF-CHECK report (L1 to L12, including L12 for the
+  opening). Then an effective-writing report on the opening paragraph
+  that marks EW-1 to EW-4 "covered by lens", has no Opening level line,
+  gives EW-5 to EW-10 each a status with sentence citations, and fills
+  its reader card from the lens report without asking the user. Needs
+  both skills installed.
+context:
+  scaffold_script: place-files.sh

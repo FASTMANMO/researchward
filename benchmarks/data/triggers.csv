@@ -1,0 +1,79 @@
+skills,model,id,kind,expect,runs,correct,fired,prompt
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-named,named,mcenerney-lens,5,5,mcenerney-lens 5,Use mcenerney-lens on the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-mcenerney,mcenerney,mcenerney-lens,5,5,mcenerney-lens 5,Dissect the paper in paper.pdf with the McEnerney lens.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-dissect,plain,mcenerney-lens,5,5,mcenerney-lens 5,Dissect the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-breakdown,plain,mcenerney-lens,5,5,mcenerney-lens 5,Break down the argument of the paper in paper.pdf for me.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-problem,plain,mcenerney-lens,5,5,mcenerney-lens 5,"What problem does the paper in paper.pdf set up, and who is it written for?"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-worth,plain,mcenerney-lens,5,5,mcenerney-lens 5,I'm deciding whether the paper in paper.pdf is worth reading closely. What does it offer m
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-learn,plain,mcenerney-lens,5,5,mcenerney-lens 5,"Help me learn from how the paper in paper.pdf is written: its problem, stakes and contribu"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,lens-analyze,plain,mcenerney-lens,5,5,mcenerney-lens 5,Analyze the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,self-mcenerney,mcenerney,mcenerney-lens,5,5,mcenerney-lens 5,Self-check my paper draft in paper.pdf with the McEnerney lens.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,self-care,plain,mcenerney-lens,5,5,mcenerney-lens 5,paper.pdf is my own draft. Does it make readers care?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,self-review,plain,mcenerney-lens,5,5,mcenerney-lens 5,paper.pdf is my manuscript. Review it before I submit it.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-named,named,effective-writing,5,5,effective-writing 5,Run effective-writing on this paragraph:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-readers,plain,effective-writing,5,5,effective-writing 5,Check this paragraph from my draft. It's for LES modelers who use eddy-viscosity closures.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-tighten,plain,effective-writing,5,5,effective-writing 5,Tighten this paragraph:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-landing,plain,effective-writing,5,5,effective-writing 5,Why isn't this paragraph landing with readers?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-reviewers,plain,effective-writing,5,5,effective-writing 5,Is this opening paragraph clear for reviewers?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-abstract,plain,effective-writing,5,5,effective-writing 5,Improve the first paragraph of my abstract:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,ew-keep-reading,plain,effective-writing,5,5,effective-writing 5,Does this paragraph give readers a reason to keep reading?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-summary,near-miss,none,5,5,none 5,Summarize the results of the paper in paper.pdf in three bullet points.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-table,near-miss,none,5,5,none 5,List the numbers in the first table of paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-references,near-miss,none,5,5,none 5,How many references does the paper in paper.pdf cite?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-translate,near-miss,none,5,5,none 5,Translate this paragraph into Spanish:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-proofread,near-miss,none,5,5,none 5,Fix the typos and grammar in this sentence: {sentence}
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-latex,near-miss,none,5,5,none 5,"Write a LaTeX table with the values 1.2, 3.4 and 5.6 in one row."
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-physics,near-miss,none,5,5,none 5,"In two sentences, what is the Kolmogorov -5/3 law?"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-haiku-5-5,no-wordcount,near-miss,none,5,5,none 5,How many words are in this paragraph?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-named,named,mcenerney-lens,5,5,mcenerney-lens 5,Use mcenerney-lens on the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-mcenerney,mcenerney,mcenerney-lens,5,5,mcenerney-lens 5,Dissect the paper in paper.pdf with the McEnerney lens.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-dissect,plain,mcenerney-lens,5,5,mcenerney-lens 5,Dissect the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-breakdown,plain,mcenerney-lens,5,5,mcenerney-lens 5,Break down the argument of the paper in paper.pdf for me.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-problem,plain,mcenerney-lens,5,5,mcenerney-lens 5,"What problem does the paper in paper.pdf set up, and who is it written for?"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-worth,plain,mcenerney-lens,5,5,mcenerney-lens 5,I'm deciding whether the paper in paper.pdf is worth reading closely. What does it offer m
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-learn,plain,mcenerney-lens,5,5,mcenerney-lens 5,"Help me learn from how the paper in paper.pdf is written: its problem, stakes and contribu"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,lens-analyze,plain,mcenerney-lens,5,5,mcenerney-lens 5,Analyze the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,self-mcenerney,mcenerney,mcenerney-lens,5,5,mcenerney-lens 5,Self-check my paper draft in paper.pdf with the McEnerney lens.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,self-care,plain,mcenerney-lens,5,5,mcenerney-lens 5,paper.pdf is my own draft. Does it make readers care?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,self-review,plain,mcenerney-lens,5,5,mcenerney-lens 5,paper.pdf is my manuscript. Review it before I submit it.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-named,named,effective-writing,5,5,effective-writing 5,Run effective-writing on this paragraph:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-readers,plain,effective-writing,5,5,effective-writing 5,Check this paragraph from my draft. It's for LES modelers who use eddy-viscosity closures.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-tighten,plain,effective-writing,5,5,effective-writing 5,Tighten this paragraph:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-landing,plain,effective-writing,5,5,effective-writing 5,Why isn't this paragraph landing with readers?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-reviewers,plain,effective-writing,5,5,effective-writing 5,Is this opening paragraph clear for reviewers?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-abstract,plain,effective-writing,5,5,effective-writing 5,Improve the first paragraph of my abstract:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,ew-keep-reading,plain,effective-writing,5,5,effective-writing 5,Does this paragraph give readers a reason to keep reading?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-summary,near-miss,none,5,5,none 5,Summarize the results of the paper in paper.pdf in three bullet points.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-table,near-miss,none,5,5,none 5,List the numbers in the first table of paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-references,near-miss,none,5,5,none 5,How many references does the paper in paper.pdf cite?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-translate,near-miss,none,5,5,none 5,Translate this paragraph into Spanish:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-proofread,near-miss,none,5,5,none 5,Fix the typos and grammar in this sentence: {sentence}
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-latex,near-miss,none,5,5,none 5,"Write a LaTeX table with the values 1.2, 3.4 and 5.6 in one row."
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-physics,near-miss,none,5,5,none 5,"In two sentences, what is the Kolmogorov -5/3 law?"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-opus-5-5,no-wordcount,near-miss,none,5,5,none 5,How many words are in this paragraph?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-named,named,mcenerney-lens,5,5,mcenerney-lens 5,Use mcenerney-lens on the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-mcenerney,mcenerney,mcenerney-lens,5,5,mcenerney-lens 5,Dissect the paper in paper.pdf with the McEnerney lens.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-dissect,plain,mcenerney-lens,5,5,mcenerney-lens 5,Dissect the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-breakdown,plain,mcenerney-lens,5,5,mcenerney-lens 5,Break down the argument of the paper in paper.pdf for me.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-problem,plain,mcenerney-lens,5,5,mcenerney-lens 5,"What problem does the paper in paper.pdf set up, and who is it written for?"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-worth,plain,mcenerney-lens,5,5,mcenerney-lens 5,I'm deciding whether the paper in paper.pdf is worth reading closely. What does it offer m
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-learn,plain,mcenerney-lens,5,5,mcenerney-lens 5,"Help me learn from how the paper in paper.pdf is written: its problem, stakes and contribu"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,lens-analyze,plain,mcenerney-lens,5,5,mcenerney-lens 5,Analyze the paper in paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,self-mcenerney,mcenerney,mcenerney-lens,5,5,mcenerney-lens 5,Self-check my paper draft in paper.pdf with the McEnerney lens.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,self-care,plain,mcenerney-lens,5,5,mcenerney-lens 5,paper.pdf is my own draft. Does it make readers care?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,self-review,plain,mcenerney-lens,5,5,mcenerney-lens 5,paper.pdf is my manuscript. Review it before I submit it.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-named,named,effective-writing,5,5,effective-writing 5,Run effective-writing on this paragraph:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-readers,plain,effective-writing,5,5,effective-writing 5,Check this paragraph from my draft. It's for LES modelers who use eddy-viscosity closures.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-tighten,plain,effective-writing,5,5,effective-writing 5,Tighten this paragraph:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-landing,plain,effective-writing,5,5,effective-writing 5,Why isn't this paragraph landing with readers?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-reviewers,plain,effective-writing,5,5,effective-writing 5,Is this opening paragraph clear for reviewers?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-abstract,plain,effective-writing,5,5,effective-writing 5,Improve the first paragraph of my abstract:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,ew-keep-reading,plain,effective-writing,5,5,effective-writing 5,Does this paragraph give readers a reason to keep reading?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-summary,near-miss,none,5,5,none 5,Summarize the results of the paper in paper.pdf in three bullet points.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-table,near-miss,none,5,5,none 5,List the numbers in the first table of paper.pdf.
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-references,near-miss,none,5,5,none 5,How many references does the paper in paper.pdf cite?
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-translate,near-miss,none,5,5,none 5,Translate this paragraph into Spanish:
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-proofread,near-miss,none,5,5,none 5,Fix the typos and grammar in this sentence: {sentence}
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-latex,near-miss,none,5,5,none 5,"Write a LaTeX table with the values 1.2, 3.4 and 5.6 in one row."
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-physics,near-miss,none,5,5,none 5,"In two sentences, what is the Kolmogorov -5/3 law?"
+"mcenerney-lens 0.8.2, effective-writing 0.6.1",claude-sonnet-5-5,no-wordcount,near-miss,none,5,5,none 5,How many words are in this paragraph?

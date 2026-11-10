@@ -1,0 +1,14 @@
+schema_version: "1.1"
+name: dissect-backscatter-intro
+expected_outcome: |
+  A DISSECT report on fields L1 to L10 that matches the dissect table in
+  Handout 1, Section 6 (the worked example, revised 6 Nov 2026). It
+  describes what the text does and where, and grades nothing: no
+  statuses, verdicts or fix moves. Readers: LES modelers who use
+  eddy-viscosity closures, plus stochastic modelers and users of dynamic
+  procedures. Value words are quoted in their sentences; the problem is
+  given in three parts; stakes are stated as physics; no doubts are
+  answered; the contribution is a local diagnostic; no pitfalls. The
+  input is an introduction only, so every location is in Section 1.
+context:
+  scaffold_script: place-files.sh

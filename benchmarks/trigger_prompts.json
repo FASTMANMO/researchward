@@ -1,0 +1,35 @@
+{
+  "_about": "Prompts for triggers.py. expect: the skill that should fire first (mcenerney-lens, effective-writing) or none. kind: named (names the skill), mcenerney (says McEnerney), plain (everyday wording), near-miss (close to a skill's job but not it). {paragraph} and {sentence} are filled in from below; prompts that mention paper.pdf get a short paper in the working folder.",
+  "paragraph": "Large-eddy simulation of turbulent premixed flames relies on subgrid-scale models to represent the unresolved scalar flux. This study uses direct numerical simulation data to evaluate several eddy-viscosity closures across a range of Karlovitz numbers. The results are presented in Section 4. It is shown that the closures differ in how they predict counter-gradient transport.",
+  "sentence": "The datas shows that the flame are thicker then expected at high Karlovitz number.",
+  "prompts": [
+    {"id": "lens-named",      "expect": "mcenerney-lens",    "kind": "named",     "text": "Use mcenerney-lens on the paper in paper.pdf."},
+    {"id": "lens-mcenerney",  "expect": "mcenerney-lens",    "kind": "mcenerney", "text": "Dissect the paper in paper.pdf with the McEnerney lens."},
+    {"id": "lens-dissect",    "expect": "mcenerney-lens",    "kind": "plain",     "text": "Dissect the paper in paper.pdf."},
+    {"id": "lens-breakdown",  "expect": "mcenerney-lens",    "kind": "plain",     "text": "Break down the argument of the paper in paper.pdf for me."},
+    {"id": "lens-problem",    "expect": "mcenerney-lens",    "kind": "plain",     "text": "What problem does the paper in paper.pdf set up, and who is it written for?"},
+    {"id": "lens-worth",      "expect": "mcenerney-lens",    "kind": "plain",     "text": "I'm deciding whether the paper in paper.pdf is worth reading closely. What does it offer me?"},
+    {"id": "lens-learn",      "expect": "mcenerney-lens",    "kind": "plain",     "text": "Help me learn from how the paper in paper.pdf is written: its problem, stakes and contribution."},
+    {"id": "lens-analyze",    "expect": "mcenerney-lens",    "kind": "plain",     "text": "Analyze the paper in paper.pdf."},
+    {"id": "self-mcenerney",  "expect": "mcenerney-lens",    "kind": "mcenerney", "text": "Self-check my paper draft in paper.pdf with the McEnerney lens."},
+    {"id": "self-care",       "expect": "mcenerney-lens",    "kind": "plain",     "text": "paper.pdf is my own draft. Does it make readers care?"},
+    {"id": "self-review",     "expect": "mcenerney-lens",    "kind": "plain",     "text": "paper.pdf is my manuscript. Review it before I submit it."},
+
+    {"id": "ew-named",        "expect": "effective-writing", "kind": "named",     "text": "Run effective-writing on this paragraph:\n\n{paragraph}"},
+    {"id": "ew-readers",      "expect": "effective-writing", "kind": "plain",     "text": "Check this paragraph from my draft. It's for LES modelers who use eddy-viscosity closures.\n\n{paragraph}"},
+    {"id": "ew-tighten",      "expect": "effective-writing", "kind": "plain",     "text": "Tighten this paragraph:\n\n{paragraph}"},
+    {"id": "ew-landing",      "expect": "effective-writing", "kind": "plain",     "text": "Why isn't this paragraph landing with readers?\n\n{paragraph}"},
+    {"id": "ew-reviewers",    "expect": "effective-writing", "kind": "plain",     "text": "Is this opening paragraph clear for reviewers?\n\n{paragraph}"},
+    {"id": "ew-abstract",     "expect": "effective-writing", "kind": "plain",     "text": "Improve the first paragraph of my abstract:\n\n{paragraph}"},
+    {"id": "ew-keep-reading", "expect": "effective-writing", "kind": "plain",     "text": "Does this paragraph give readers a reason to keep reading?\n\n{paragraph}"},
+
+    {"id": "no-summary",      "expect": "none",              "kind": "near-miss", "text": "Summarize the results of the paper in paper.pdf in three bullet points."},
+    {"id": "no-table",        "expect": "none",              "kind": "near-miss", "text": "List the numbers in the first table of paper.pdf."},
+    {"id": "no-references",   "expect": "none",              "kind": "near-miss", "text": "How many references does the paper in paper.pdf cite?"},
+    {"id": "no-translate",    "expect": "none",              "kind": "near-miss", "text": "Translate this paragraph into Spanish:\n\n{paragraph}"},
+    {"id": "no-proofread",    "expect": "none",              "kind": "near-miss", "text": "Fix the typos and grammar in this sentence: {sentence}"},
+    {"id": "no-latex",        "expect": "none",              "kind": "near-miss", "text": "Write a LaTeX table with the values 1.2, 3.4 and 5.6 in one row."},
+    {"id": "no-physics",      "expect": "none",              "kind": "near-miss", "text": "In two sentences, what is the Kolmogorov -5/3 law?"},
+    {"id": "no-wordcount",    "expect": "none",              "kind": "near-miss", "text": "How many words are in this paragraph?\n\n{paragraph}"}
+  ]
+}

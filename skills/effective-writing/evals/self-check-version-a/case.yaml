@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: self-check-version-a
+expected_outcome: |
+  A SELF-CHECK report that matches the Version A column of Handout 2,
+  Section 4 (the worked example): EW-1 MISSING at ladder level L0, EW-2,
+  EW-3, EW-4 and EW-10 MISSING, EW-5, EW-6 and EW-8 PARTIAL, EW-7 N/A and
+  EW-9 STRONG. The reader card comes from the prompt, every finding cites
+  sentence numbers, each criterion has at most one fix move, the priority
+  fix is one of EW-1 to EW-3, and the paragraph is not rewritten.
