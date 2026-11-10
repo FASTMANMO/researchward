@@ -12,13 +12,33 @@ The same reading helps when the paper isn't yours. Experts can skim a paper for 
 
 ## Install
 
-Each skill is a folder in the open Agent Skills format, so installing it requires copying or uploading.
+**The easy way: give your AI agent the link.** In an agent that can run commands, such as Claude Code, Codex, Cursor or Gemini CLI, paste:
 
-- **Claude Code:** copy a folder from `skills/` into `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
-- **Claude apps:** zip a skill folder and add it as a custom skill.
-- **Codex:** copy a folder into `~/.codex/skills/`.
-- **ChatGPT:** upload the zipped skill folder. As of October 2026, OpenAI lists personal Skills for Business, Enterprise, Healthcare, and Edu workspaces.
-- **With the `skills` installer:** `npx skills add FASTMANMO/researchward --skill mcenerney-lens` (or `--skill effective-writing`).
+> Install the skills from https://github.com/FASTMANMO/researchward
+
+It reads the steps under [For AI agents](#for-ai-agents) and does the rest. Start a new session afterwards so the skills load.
+
+**Claude Code**, as a plugin that also receives updates:
+
+```
+/plugin install researchward --marketplace FASTMANMO/researchward
+```
+
+On Claude Code older than 2.1.275, run `/plugin marketplace add FASTMANMO/researchward`, then `/plugin install researchward@researchward`.
+
+**Claude apps (web and desktop):** download [`mcenerney-lens.zip`](https://github.com/FASTMANMO/researchward/releases/latest/download/mcenerney-lens.zip) and [`effective-writing.zip`](https://github.com/FASTMANMO/researchward/releases/latest/download/effective-writing.zip). In Claude, open Customize → Skills, click **+** → Create skill → Upload a skill, and upload each file. Skills need code execution, which is under Settings → Capabilities.
+
+**ChatGPT:** upload the same two zip files as skills. As of October 2026, OpenAI lists personal Skills for Business, Enterprise, Healthcare, and Edu workspaces.
+
+**Any agent, one command:** `npx skills add FASTMANMO/researchward --skill mcenerney-lens` (and again with `--skill effective-writing`).
+
+### For AI agents
+
+To install these skills for the user:
+
+1. Clone the repository: `git clone --depth 1 https://github.com/FASTMANMO/researchward`.
+2. Copy `skills/mcenerney-lens/` and `skills/effective-writing/`, without their `evals/` folders, into the user's skills folder: `~/.claude/skills/` for Claude Code, `~/.codex/skills/` for Codex, or the folder your tool documents for Agent Skills. Each skill is a folder with a `SKILL.md`.
+3. Tell the user to start a new session, then try: "Dissect this paper with the McEnerney lens" or "Check this paragraph; it's for [readers]".
 
 ## The skills
 

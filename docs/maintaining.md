@@ -72,3 +72,15 @@ cd ../researchward && git diff --stat               # review, then commit and pu
 ```
 
 It copies every tracked file except the script itself, and drops the report texts from `benchmarks/data/runs.jsonl` (they quote the benchmark papers, which are copyrighted); every number stays. It stops if any file still mentions unreleased work.
+
+## Releases
+
+The README's Claude-app and ChatGPT install links point to the zip files of the latest GitHub release of the public repo. After changing a skill, build fresh zips (each holds the skill folder without `evals/`) and attach them to a new release:
+
+```
+cd skills
+for s in mcenerney-lens effective-writing; do zip -q -r -X ../$s.zip $s -x "$s/evals/*"; done
+gh release create vX.Y.Z ../mcenerney-lens.zip ../effective-writing.zip --repo FASTMANMO/researchward --title "Researchward X.Y.Z"
+```
+
+Bump the plugin `version` in `.claude-plugin/marketplace.json` at the same time, so Claude Code users get the update.

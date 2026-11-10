@@ -1,0 +1,22 @@
+{
+  "name": "researchward",
+  "description": "Research reading and writing skills built on Larry McEnerney's reader-value method",
+  "owner": {
+    "name": "Mohammed Meligy"
+  },
+  "plugins": [
+    {
+      "name": "researchward",
+      "source": ".",
+      "description": "mcenerney-lens dissects or self-checks a whole paper; effective-writing checks one paragraph for its readers",
+      "version": "1.0.0",
+      "author": {
+        "name": "Mohammed Meligy"
+      },
+      "homepage": "https://github.com/FASTMANMO/researchward",
+      "repository": "https://github.com/FASTMANMO/researchward",
+      "license": "MIT",
+      "keywords": ["research", "academic writing", "papers", "McEnerney", "skills"]
+    }
+  ]
+}
