@@ -9,7 +9,7 @@
       "name": "researchward",
       "source": ".",
       "description": "mcenerney-lens dissects or self-checks a whole paper; effective-writing checks one paragraph for its readers",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "Mohammed Meligy"
       },
