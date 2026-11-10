@@ -5,4 +5,4 @@ match: contains
 flags: m
 ---
 
-^\|\s*Problem word[^|\n]*\|[^|\n]*\*\*incomplete\*\*
+^\|[^|\n]*[Pp]roblem word[^|\n]*\|[^|\n]*\*\*incomplete\*\*

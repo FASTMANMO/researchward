@@ -17,7 +17,7 @@ The status lines apply the handout's methods to each field; they are not printed
 | L7 Doubts answered | The main doubts these readers would raise are named and answered, with locations | Some are answered, or answered without being named | No doubt is anticipated |
 | L8 Contribution | Offered as something these readers can use | Offered as an activity ("X is analyzed") or an idea to display | No contribution stated |
 | L9 Structure | Problem, then prior work that sharpens it, then the contribution; explanation after value; error model; the discussion and conclusion return to the problem | One of these falls short: the literature review lists who said what, the gap model, explanation before the problem, or a conclusion that never returns to it | Opens on background or generalizations (the martini glass) and never builds a problem |
-| L10 Pitfalls | None of the four checks found | One check found | Two or more found |
+| L10 Pitfalls | All four avoided | One present | Two or more present |
 | L11 Value count | 8 or more distinct value words in the first two paragraphs | 4–7 | 3 or fewer |
 | L12 Opening | The first sentence starts from the readers' problem, the question the paper answers appears in the first paragraph, and no later section states the problem more sharply | The question first appears after the first paragraph, or a later section states the problem more sharply | The paper never states the problem it solves |
 

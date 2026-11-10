@@ -3,7 +3,7 @@ name: mcenerney-lens
 description: "Reads a whole research paper, or a draft, through Larry McEnerney's reader-value lens (fields L1-L12): its readers, value words in context, the value it offers, the problem, its stance toward prior work, the stakes, the doubts it answers, its contribution, its structure and its pitfalls, each with an exact location in any section. Two modes: dissect someone else's paper (describes what it does, never grades it) or self-check your own draft (each field met, partly met or not met, with one fix). Use it whenever someone wants to dissect, break down, analyze or learn from a paper, asks whether a paper is worth reading closely or what problem, stakes or contribution it sets up, wants their own draft reviewed before submission or asks whether it makes readers care, or mentions McEnerney, value words, or the gap vs error model. Load it afresh for every paper, even later in a conversation. For sentence-level checks of one paragraph use effective-writing."
 license: MIT
 metadata:
-  version: "0.8.4"
+  version: "0.8.5"
   author: "Mohammed Meligy, Mechanical and Aerospace Engineering, Arizona State University"
   source: "Handout 1, Expert Academic Writing Methods (docs/handouts in the repo)"
 ---
@@ -47,7 +47,7 @@ If it is unclear whose text it is, ask once. If you can't ask, choose (the user 
 | L7 | Doubts answered | The doubts readers would raise about this paper's own claims (is the method valid, do the results hold, how far does it apply) that the text names, and where it answers them. Shortcomings of prior work belong to L5, not here |
 | L8 | Contribution | What the paper offers in response to the problem: named as something readers can use (a tool, test, method) or only as an activity ("X is analyzed") |
 | L9 | Structure | Whether the paper builds from instability (problem, then prior work that sharpens it, then contribution); whether explanation (definitions, background, method) comes only after value is established; whether the literature review builds the problem or lists who said what; error model or gap model (M5); whether the discussion and conclusion return to the problem |
-| L10 | Pitfalls | Four checks, listed below. Each is reported as found (quoted, with its location) or not found |
+| L10 | Pitfalls | Four checks, listed below. Each is reported as avoided, or present (quoted, with its location) |
 | L11 | Value count | Self-check only: distinct value words in the first two paragraphs of the introduction |
 | L12 | Opening | Self-check only: whether the first sentence states the problem the paper ended up solving. Check it against L4: if a later section states the problem more sharply, the opening should carry it |
 
@@ -89,7 +89,7 @@ The report has one format. It is the same for the first paper in a conversation 
 - No IDs or codes: no L1, M8, R2 or EW-1. Field labels are numbers and names.
 - No abbreviations: write Section, paragraph and Figure in full; no "N/A".
 - No handout terms without their meaning: say "shows that prior work is wrong or incomplete", not "error model"; "only says the topic hasn't been studied", not "gap model"; "opens on background before any problem", not "martini glass"; "problem words" and "community words", not "instability words".
-- Statuses read Met, Partly met, Not met and Does not apply, never STRONG, PARTIAL, MISSING or N/A. Fixes are plain instructions, without method codes.
+- Statuses read Met, Partly met, Not met and Does not apply, never STRONG, PARTIAL, MISSING or N/A. In the pitfalls table, the Avoided? column reads Avoided, Present or Does not apply, never Found or Not found. Fixes are plain instructions, without method codes.
 
 **Hard limits.** Count; don't estimate.
 
@@ -136,12 +136,12 @@ Then **Reusable frames** (sentence patterns to borrow, with the paper's specific
 
 **10- Pitfalls**
 
-| Check | What the paper does | Where |
+| Pitfall | Avoided? | What the paper does, and where |
 |---|---|---|
-| Background opening | Not found: the first problem word, "**incomplete**", is in the first paragraph | Section 1, paragraph 1: "A priori tests…" |
-| The writers' interest as the reason | Not found | – |
-| Originality as the value | Found: "…the **first** a posteriori test of…", and the paragraph does not say what it changes for readers | Section 1, paragraph 4: "We present…" |
-| Results without consequence | Found in two paragraphs: each describes the figure and stops | Section 4, paragraph 2: "Figure 6 shows…"; Section 4, paragraph 5: "As seen in…" |
+| Background opening | Avoided | The first problem word, "**incomplete**", is in the first paragraph (Section 1, paragraph 1: "A priori tests…") |
+| The writers' interest as the reason | Avoided | – |
+| Originality as the value | Present | "…the **first** a posteriori test of…", and the paragraph does not say what it changes for readers (Section 1, paragraph 4: "We present…") |
+| Results without consequence | Present | Two paragraphs describe a figure and stop (Section 4, paragraph 2: "Figure 6 shows…"; Section 4, paragraph 5: "As seen in…") |
 
 **SELF-CHECK** — the same header and the same two tables, then:
 
@@ -150,7 +150,7 @@ Then **Reusable frames** (sentence patterns to borrow, with the paper's specific
 | 1- Readers | Met | … (Section 1, paragraph 1: "…") |
 | 2- Value words | Met | Problem words wherever the problem is built; see the table below |
 | … | … | … |
-| 10- Pitfalls | Met | None of the four checks found; see the table below |
+| 10- Pitfalls | Met | All four avoided; see the table below |
 | … | … | … |
 | 12- Opening states the problem | Partly met | … |
 

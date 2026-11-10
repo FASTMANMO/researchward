@@ -63,4 +63,6 @@ Three runs per case, 9 Nov 2026, Opus 5.5 for the skills and Sonnet 5.5 as the j
 
 The last two lens and effective-writing cases were rerun after the final rule changes; the other five ran on the version just before them.
 
+**10 Nov 2026, lens 0.8.5** (pitfalls table now reads Avoided / Present): the three lens cases, three runs each. Every pitfalls check passed in all nine runs, including after drift. `self-check-backscatter-intro` and `dissect-after-drift` passed 3 of 3. `dissect-backscatter-intro` passed every check in 1 of 3 runs. One miss was the test's fault: a row labeled "Community word and problem word", which the skill's rules allow, didn't match the pattern, which now accepts it. The two others are content calls missed once each, within the 2-of-3 bar: the stakes row (judged), and Figure 1 left uncited in one report.
+
 Not yet done: cases from other fields, a whole paper rather than an introduction, and runs in ChatGPT.
