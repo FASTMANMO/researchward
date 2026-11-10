@@ -72,7 +72,7 @@ For one paragraph; say who it is for, so the check can judge it against those re
 - "Check this paragraph from my draft. It's for LES modelers who use eddy-viscosity closures."
 - "Check the first paragraph of my abstract. It's for reviewers at a public health journal."
 
-## What a report looks like
+## Report structure
 
 <p align="center">
   <img alt="The layout of both reports. mcenerney-lens: a header with the text and its readers, a main table of fields 1 to 12 with a Met? column, a value-words table, reusable frames, a pitfalls table with an Avoided? column, and, for a self-check, How to fix, Priority fix and Untouched. effective-writing: a reader card, the paragraph split into S1, S2 and so on, a table of the ten criteria with a Met? column, and, for a self-check, the same fix lines." src="docs/images/report-structure.svg" width="820">
@@ -94,7 +94,7 @@ Comparing papers only works if every report is built the same way, and without t
 
 ## Sources and credit
 
-The handouts give a lecture time stamp for each method, so you can check any rule in the skills against McEnerney's own words.
+The handouts include a lecture timestamp for each method, so you can check any rule in the skills against McEnerney's own words.
 
 ### The lectures
 
