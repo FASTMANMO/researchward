@@ -3,7 +3,7 @@
 
 The diagram follows the report templates in skills/mcenerney-lens/SKILL.md (section 5)
 and skills/effective-writing/SKILL.md (section 6); field and criterion labels are copied
-exactly. The statuses shown are illustrative. Redraw it whenever a template changes:
+exactly. Statuses and sample text are illustrative. Redraw it whenever a template changes:
   python3 tools/draw_report_structure.py
 The script measures every label with Liberation Sans (Arial's metrics) and stops if one
 would not fit its space.
@@ -16,173 +16,226 @@ from PIL import ImageFont
 
 OUT = Path(__file__).resolve().parents[1] / "docs/images/report-structure.svg"
 FONTS = "/usr/share/fonts/truetype/liberation/LiberationSans-{}.ttf"
-W, PAD, GAP = 1000, 24, 28
-COL = (W - 2 * PAD - GAP) // 2          # panel width
-IN = COL - 32                            # content width inside a panel
-INK, MUTED, LINE, FILL, HEAD = "#1f2328", "#59636e", "#d1d9e0", "#f6f8fa", "#eef1f4"
-STATUS = {"Met": "#2e7d32", "Partly met": "#a15c00", "Not met": "#c62828",
-          "Does not apply": "#6b7280", "Avoided": "#2e7d32", "Present": "#c62828"}
+# Layout units; the SVG is drawn ZOOM times larger. Each panel is only as wide as its
+# longest row needs, so the text is as large as the figure's width allows.
+COL_LENS, COL_EW, PAD, GAP, ZOOM = 518, 584, 28, 40, 1.125
+W = 2 * PAD + COL_LENS + GAP + COL_EW
+COL = COL_LENS
+INK, SOFT, RULE = "#1f2328", "#424a53", "#8c959f"
+STATUS = {"Met": "#1a7f37", "Partly met": "#9a6700", "Not met": "#cf222e",
+          "Does not apply": "#57606a", "Avoided": "#1a7f37", "Present": "#cf222e"}
 FAMILY = "Helvetica, Arial, sans-serif"
+RH = 21  # table row height
 
 out, problems = [], []
 
 
-def width(s, size, bold=False):
-    return ImageFont.truetype(FONTS.format("Bold" if bold else "Regular"), size).getlength(s)
+def font(size, bold=False, italic=False):
+    style = {(False, False): "Regular", (True, False): "Bold",
+             (False, True): "Italic", (True, True): "BoldItalic"}[(bold, italic)]
+    return ImageFont.truetype(FONTS.format(style), size)
 
 
-def text(x, y, s, size=12, bold=False, color=INK, anchor="start", italic=False, room=None):
-    if room is not None and width(s, size, bold) > room:
-        problems.append(f"too wide ({width(s, size, bold):.0f} > {room:.0f}px): {s}")
+def width(segs, size, italic=False):
+    return sum(font(size, b, italic).getlength(s) for s, b in segs)
+
+
+def text(x, y, segs, size=12, color=INK, anchor="start", italic=False, room=None, bold=False):
+    """segs: a string, or a list of (text, bold) pieces for mixed weight."""
+    if isinstance(segs, str):
+        segs = [(segs, bold)]
+    if room is not None and width(segs, size, italic) > room:
+        problems.append(f"too wide ({width(segs, size, italic):.0f} > {room:.0f}px): "
+                        + "".join(s for s, _ in segs))
+    spans = "".join(f'<tspan font-weight="{"bold" if b else "normal"}">{escape(s)}</tspan>'
+                    for s, b in segs)
     out.append(f'<text x="{x:.1f}" y="{y:.1f}" font-family="{FAMILY}" font-size="{size}" '
-               f'font-weight="{"bold" if bold else "normal"}" fill="{color}" '
-               f'text-anchor="{anchor}"{" font-style=\"italic\"" if italic else ""}>'
-               f'{escape(s)}</text>')
+               f'fill="{color}" text-anchor="{anchor}"'
+               f'{" font-style=\"italic\"" if italic else ""}>{spans}</text>')
 
 
-def rect(x, y, w, h, fill="none", stroke=LINE, r=0, sw=1):
-    out.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" rx="{r}" '
-               f'fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>')
+def line(x1, y1, x2, y2, sw=1, color=INK, dash=None):
+    out.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{color}" '
+               f'stroke-width="{sw}"{f" stroke-dasharray=\"{dash}\"" if dash else ""}/>')
 
 
-def chip(x, y, status):
-    w = width(status, 10.5, True) + 16
-    rect(x, y - 12, w, 17, fill=STATUS[status], stroke="none", r=8.5)
-    text(x + w / 2, y + 1, status, 10.5, True, "#ffffff", "middle")
+def fit(s, size, room):
+    """Cut s with an ellipsis so it fits room."""
+    if font(size).getlength(s) <= room:
+        return s
+    words = s.split()
+    while font(size).getlength(" ".join(words) + " …") > room:
+        words.pop()
+    return " ".join(words).rstrip(",") + " …"
 
 
-def heading(x, y, title, note=""):
-    text(x, y, title, 13, True, room=IN * 0.62)
-    if note:
-        text(x + IN, y, note, 11, color=MUTED, anchor="end", room=IN * 0.38)
-    return y + 10
+def heading(x, y, title):
+    text(x, y, title, 14, bold=True, room=COL)
+    return y + 12
 
 
-def table(x, y, cols, rows, chip_col=None, shade=()):
-    rh = 22
-    rect(x, y, IN, rh, fill=HEAD)
+def table(x, y, cols, rows, status_col=None, group=None):
+    """Booktabs-style table. group: (row index, label) starts a labeled group of rows."""
+    line(x, y, x + COL, y, 1.4)
     cx = x
     for h, cw in cols:
-        text(cx + 8, y + 15, h, 11.5, True, MUTED, room=cw - 12)
+        text(cx + 2, y + 15, h, 12, bold=True, room=cw - 8)
         cx += cw
-    y += rh
+    y += 22
+    line(x, y, x + COL, y, 0.7)
     for i, row in enumerate(rows):
-        rect(x, y, IN, rh, fill=FILL if i in shade else "#ffffff")
+        if group and i == group[0]:
+            line(x, y + 1, x + COL, y + 1, 0.7, RULE, "3 3")
+            text(x + 2, y + 16, group[1], 11.5, SOFT, italic=True)
+            y += RH
         cx = x
         for j, (cell, (_, cw)) in enumerate(zip(row, cols)):
-            if j == chip_col:
-                chip(cx + 8, y + 15, cell)
+            if j == status_col:
+                text(cx + 2, y + 15, cell, 12, STATUS[cell], bold=True, room=cw - 8)
             else:
-                text(cx + 8, y + 15, cell, 11.5, color=INK if j == 0 else MUTED, room=cw - 12)
+                text(cx + 2, y + 15, cell, 12, room=cw - 8)
             cx += cw
-        y += rh
-    return y
+        y += RH
+    line(x, y + 4, x + COL, y + 4, 1.4)
+    return y + 4
 
 
-def note(x, y, s):
-    text(x, y, s, 10.5, color=MUTED, room=IN)
-    return y
-
-
-def lines(x, y, items, size=11.5, step=17):
-    for s in items:
-        text(x, y, s, size, color=MUTED, room=IN)
-        y += step
+def fields(x, y, items):
+    indent = 0
+    for label, value in items:
+        if label:
+            indent = font(12.5, True).getlength(label + "  ")
+            text(x, y, [(label + "  ", True), (value, False)], 12.5, room=COL)
+        else:
+            text(x + indent, y, value, 12.5, room=COL - indent)
+        y += 19
     return y
 
 
 def fixes(x, y, example):
-    h = 104
-    rect(x, y, IN, h, fill=FILL, stroke=LINE, r=6)
-    text(x + 12, y + 21, "How to fix", 12.5, True)
-    text(x + IN - 12, y + 21, "self-check only", 11, color=MUTED, anchor="end")
-    lines(x + 12, y + 42, ["One line for each one not fully met, such as", example,
-                           "Priority fix: the one that most limits value, and why",
-                           "Untouched: numbers, results and technical claims"], 11.5, 16)
-    return y + h
+    y = heading(x, y, "How to fix")
+    for segs in ([(example, False)],
+                 [("Priority fix: ", True), ("the gap that most limits value, and why", False)],
+                 [("Untouched: ", True), ("numbers, results and technical claims", False)]):
+        y += 19
+        text(x, y, segs, 12.5, room=COL)
+    return y
 
 
-def panel(x, name, works_on, title, build):
-    text(x, PAD + 20, name, 20, True)
-    text(x + COL, PAD + 20, works_on, 13, color=MUTED, anchor="end")
-    top = PAD + 34
-    start = len(out)
-    text(x + 16, top + 26, title, 13.5, True, room=IN)
-    y = build(x + 16, top + 50)
-    out.insert(start, f'<rect x="{x}" y="{top}" width="{COL}" height="{y - top + 16}" rx="8" '
-                      f'fill="#ffffff" stroke="{LINE}" stroke-width="1.2"/>')
-    return y + 16
+def title(x, y, name, sub):
+    text(x, y, name, 22, bold=True)
+    text(x, y + 22, sub, 13, SOFT, room=COL)
+    line(x, y + 34, x + COL, y + 34, 1.2)
+    return y + 62
 
 
 def lens(x, y):
-    y = lines(x, y, ["Text: title, venue, sections read",
-                     "Readers: research community; wider readers"])
-    y = heading(x, y + 12, "Main table", "10 rows (dissect), 12 (self-check)")
-    fields = [("1- Readers", "Met"), ("2- Value words", "Met"),
-              ("3- Value offered", "Partly met"), ("4- Problem", "Met"),
-              ("5- Stance toward prior work", "Met"), ("6- Stakes", "Not met"),
-              ("7- Doubts answered", "Partly met"), ("8- Contribution", "Met"),
-              ("9- Structure", "Met"), ("10- Pitfalls", "Partly met"),
-              ("11- Value words in the first two paragraphs", "Met"),
-              ("12- Opening states the problem", "Partly met")]
-    y = table(x, y, [("Field", 310), ("Met?", IN - 310)], fields, chip_col=1, shade=(10, 11))
-    note(x, y + 15, "Each row also says what the paper does, with a quote and its location.")
-    note(x, y + 30, "Dissect leaves out Met? and the shaded rows.")
-    y = heading(x, y + 56, "2- Value words in context", "up to 10 rows")
-    y = table(x, y, [("Kind", 112), ("Sentence, value word in bold", 176), ("Where", IN - 288)],
-              [("Problem word", "“…is incomplete…”", "Section 1, paragraph 1"),
-               ("Community word", "“Most practitioners…”", "Section 1, paragraph 1")])
-    y = heading(x, y + 28, "Reusable frames", "up to 3")
-    y = lines(x, y + 8, ["Sentence patterns to borrow, with the specifics as [slots]"])
-    y = heading(x, y + 14, "10- Pitfalls", "4 checks")
-    y = table(x, y, [("Pitfall", 300), ("Avoided?", IN - 300)],
-              [("Background opening", "Avoided"),
-               ("The writers' interest as the reason", "Avoided"),
-               ("Originality as the value", "Avoided"),
-               ("Results without consequence", "Present")], chip_col=1)
-    note(x, y + 15, "Each present pitfall gets a quote and its location.")
-    return fixes(x, y + 32, "“6- Stakes: say what the problem costs these readers.”")
+    y = title(x, y, "mcenerney-lens", "A whole paper · Dissect or Self-check")
+    y = fields(x, y, [("Text", "title, venue, sections read"),
+                      ("Readers", "the research community; wider readers")])
+    y = heading(x, y + 16, "Main table")
+    rows = [("1- Readers", "Met", "“…” (Section 1, paragraph 1)"),
+            ("2- Value words", "Met", "See the table below"),
+            ("3- Value offered", "Partly met", "“…” (Abstract)"),
+            ("4- Problem", "Met", "“…” (Section 1, paragraph 2)"),
+            ("5- Stance toward prior work", "Met", "“…” (Section 2, paragraph 3)"),
+            ("6- Stakes", "Not met", "No cost to readers is stated"),
+            ("7- Doubts answered", "Partly met", "“…” (Section 4, paragraph 2)"),
+            ("8- Contribution", "Met", "“…” (Section 1, paragraph 4)"),
+            ("9- Structure", "Met", "Section headings 1–5"),
+            ("10- Pitfalls", "Partly met", "See the table below"),
+            ("11- Value words in the first two paragraphs", "Met", "“…” (Section 1, paragraph 1)"),
+            ("12- Opening states the problem", "Partly met", "“…” (Section 1, paragraph 1)")]
+    y = table(x, y, [("Field", COL - 270), ("Met?", 76), ("What the paper does, and where", 194)],
+              rows, status_col=1, group=(10, "Self-check only"))
+    y = heading(x, y + 30, "2- Value words in context")
+    vw = [(112, "Kind"), (COL - 306, "Sentence, value word in bold"), (194, "Where")]
+    line(x, y, x + COL, y, 1.4)
+    cx = x
+    for cw, h in vw:
+        text(cx + 2, y + 15, h, 12, bold=True, room=cw - 8)
+        cx += cw
+    y += 22
+    line(x, y, x + COL, y, 0.7)
+    for kind, segs, where in (("Problem word", [("“…the models are ", False), ("incomplete", True),
+                                                ("…”", False)], "Section 1, paragraph 1"),
+                              ("Community word", [("“", False), ("Most practitioners", True),
+                                                  (" assume…”", False)], "Section 1, paragraph 1")):
+        text(x + 2, y + 15, kind, 12)
+        text(x + vw[0][0] + 2, y + 15, segs, 12, room=vw[1][0] - 8)
+        text(x + vw[0][0] + vw[1][0] + 2, y + 15, where, 12, room=vw[2][0] - 4)
+        y += RH
+    line(x, y + 4, x + COL, y + 4, 1.4)
+    y = heading(x, y + 34, "Reusable frames")
+    y = fields(x, y + 7, [("e.g.", "[Approach] is standard for [task], but it [fails when …].")])
+    y = heading(x, y + 14, "10- Pitfalls")
+    y = table(x, y, [("Pitfall", COL - 270), ("Avoided?", 76), ("What the paper does, and where", 194)],
+              [("Background opening", "Avoided", "–"),
+               ("The writers' interest as the reason", "Avoided", "–"),
+               ("Originality as the value", "Avoided", "–"),
+               ("Results without consequence", "Present", "“…” (Section 4, paragraph 5)")],
+              status_col=1)
+    return fixes(x, y + 30, "6- Stakes: say what the problem costs these readers.")
+
+
+PARAGRAPH = ["First sentence, exactly as written.",
+             "Second sentence, exactly as written.",
+             "Third sentence, exactly as written.",
+             "… one line per sentence, to the end of the paragraph."]
 
 
 def ew(x, y):
-    y = lines(x, y, ["Reader card: readers · what they believe now · what they value ·",
-                     "what they should think or do after reading · how they read"])
-    y = heading(x, y + 12, "The paragraph", "one sentence per line")
-    for s, w in (("S1", 300), ("S2", 370), ("S3", 250), ("S4", 330)):
-        text(x, y + 14, s, 12, True)
-        rect(x + 30, y + 5, w, 10, fill=HEAD, stroke="none", r=3)
-        y += 22
-    y = heading(x, y + 20, "Criteria table", "all 10 rows, both modes")
-    rows = [("1- Opening gives readers a role", "Not met"),
-            ("2- Names and challenges what readers believe", "Partly met"),
-            ("3- Shows what is at stake for readers", "Not met"),
-            ("4- Offers something readers can use", "Met"),
-            ("5- Sentence subjects are what readers care about", "Partly met"),
-            ("6- Sentence endings carry the key point", "Met"),
-            ("7- Long sentences pay off early", "Does not apply"),
-            ("8- No sentence needs a reread", "Met"),
-            ("9- Nothing slows readers down", "Met"),
-            ("10- Changes what readers think, not only shows knowledge", "Partly met")]
-    y = table(x, y, [("Criterion", 324), ("Met?", IN - 324)], rows, chip_col=1)
-    note(x, y + 15, "Each row also says what the paragraph does, citing S1, S2, …")
-    note(x, y + 30, "Dissect, for someone else's paragraph: the same table, no fixes.")
-    return fixes(x, y + 48, "“1- Opening gives readers a role: start S1 from their question.”")
+    y = title(x, y, "effective-writing", "One paragraph · Self-check or Dissect")
+    y = fields(x, y, [("Reader card", "who reads · what they believe now · what they value"),
+                      ("", "what they should think or do after · how they read")])
+    y = heading(x, y + 16, "The paragraph")
+    for i, s in enumerate(PARAGRAPH, 1):
+        y += 19
+        text(x, y, f"S{i}", 12.5, bold=True)
+        text(x + 28, y, fit(s, 12.5, COL - 28), 12.5)
+    y = heading(x, y + 30, "Criteria table")
+    rows = [("1- Opening gives readers a role", "Not met", "S1 names a topic only"),
+            ("2- Names and challenges what readers believe", "Partly met", "S2 implies the belief"),
+            ("3- Shows what is at stake for readers", "Not met", "Nothing at risk in S1–S4"),
+            ("4- Offers something readers can use", "Met", "S4: “…”"),
+            ("5- Sentence subjects are what readers care about", "Partly met", "S2, S3: “this study”"),
+            ("6- Sentence endings carry the key point", "Met", "S1–S4 end on content"),
+            ("7- Long sentences pay off early", "Does not apply", "S1–S4 are short"),
+            ("8- No sentence needs a reread", "Met", "S1–S4 read once"),
+            ("9- Nothing slows readers down", "Met", "No friction in S1–S4"),
+            ("10- Changes what readers think, not only shows knowledge", "Partly met",
+             "S3 only reports")]
+    y = table(x, y, [("Criterion", COL - 258), ("Met?", 104), ("What the paragraph does", 154)],
+              rows, status_col=1)
+    return fixes(x, y + 30, "1- Opening gives readers a role: start S1 from their question.")
 
 
 def main():
-    y1 = panel(PAD, "mcenerney-lens", "a whole paper",
-               "McEnerney-lens report · Dissect or Self-check", lens)
-    y2 = panel(PAD + COL + GAP, "effective-writing", "one paragraph",
-               "Effective-writing report · Self-check or Dissect", ew)
-    H = max(y1, y2) + 40
-    text(W / 2, H - 16, "The same layout, in the same order, every time. "
-         "Statuses here are examples.", 12, color=MUTED, anchor="middle", room=W - 2 * PAD)
+    global COL
+    COL = COL_LENS
+    y1 = lens(PAD, PAD + 22)
+    COL = COL_EW
+    y2 = ew(PAD + COL_LENS + GAP, PAD + 22)
+    mid = PAD + COL_LENS + GAP / 2
+    line(mid, PAD + 6, mid, max(y1, y2), 0.7, "#d0d7de")
+    y = max(y1, y2) + 34
+    line(PAD, y - 16, W - PAD, y - 16, 0.7, "#d0d7de")
+    caption = [
+        [("Report layouts. ", True), ("Both skills return this layout, in this order, for every "
+                                      "paper or paragraph; statuses and sample text are examples.", False)],
+        [("Dissect mode leaves out How to fix; for mcenerney-lens it also leaves out the Met? column "
+          "and rows 11–12.", False)]]
+    for segs in caption:
+        text(PAD, y, segs, 12.5, SOFT, room=W - 2 * PAD)
+        y += 19
+    H = y + PAD - 18
     if problems:
         sys.exit("\n".join(problems))
-    OUT.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H:.0f}" '
+    OUT.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W * ZOOM:.0f}" '
+                   f'height="{H * ZOOM:.0f}" '
                    f'viewBox="0 0 {W} {H:.0f}">\n<rect width="{W}" height="{H:.0f}" '
                    f'fill="#ffffff"/>\n' + "\n".join(out) + "\n</svg>\n")
-    print(f"wrote {OUT} ({W}x{H:.0f})")
+    print(f"wrote {OUT} ({W * ZOOM:.0f}x{H * ZOOM:.0f})")
 
 
 if __name__ == "__main__":

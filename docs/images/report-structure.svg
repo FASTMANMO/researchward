@@ -1,181 +1,150 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="971" viewBox="0 0 1000 971">
-<rect width="1000" height="971" fill="#ffffff"/>
-<text x="24.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="start">mcenerney-lens</text>
-<text x="486.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#59636e" text-anchor="end">a whole paper</text>
-<rect x="24" y="58" width="462" height="873" rx="8" fill="#ffffff" stroke="#d1d9e0" stroke-width="1.2"/>
-<text x="40.0" y="84.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#1f2328" text-anchor="start">McEnerney-lens report · Dissect or Self-check</text>
-<text x="40.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Text: title, venue, sections read</text>
-<text x="40.0" y="125.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Readers: research community; wider readers</text>
-<text x="40.0" y="154.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328" text-anchor="start">Main table</text>
-<text x="470.0" y="154.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">10 rows (dissect), 12 (self-check)</text>
-<rect x="40.0" y="164.0" width="430.0" height="22.0" rx="0" fill="#eef1f4" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="179.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Field</text>
-<text x="358.0" y="179.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Met?</text>
-<rect x="40.0" y="186.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="201.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">1- Readers</text>
-<rect x="358.0" y="189.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="208.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="223.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">2- Value words</text>
-<rect x="358.0" y="211.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="224.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="230.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="245.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">3- Value offered</text>
-<rect x="358.0" y="233.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="391.4" y="246.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<rect x="40.0" y="252.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="267.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">4- Problem</text>
-<rect x="358.0" y="255.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="268.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="274.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="289.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">5- Stance toward prior work</text>
-<rect x="358.0" y="277.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="290.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="296.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="311.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">6- Stakes</text>
-<rect x="358.0" y="299.0" width="55.1" height="17.0" rx="8.5" fill="#c62828" stroke="none" stroke-width="1"/>
-<text x="385.5" y="312.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Not met</text>
-<rect x="40.0" y="318.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="333.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">7- Doubts answered</text>
-<rect x="358.0" y="321.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="391.4" y="334.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<rect x="40.0" y="340.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="355.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">8- Contribution</text>
-<rect x="358.0" y="343.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="356.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="362.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="377.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">9- Structure</text>
-<rect x="358.0" y="365.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="378.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="384.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="399.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">10- Pitfalls</text>
-<rect x="358.0" y="387.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="391.4" y="400.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<rect x="40.0" y="406.0" width="430.0" height="22.0" rx="0" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="421.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">11- Value words in the first two paragraphs</text>
-<rect x="358.0" y="409.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="375.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="40.0" y="428.0" width="430.0" height="22.0" rx="0" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="443.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">12- Opening states the problem</text>
-<rect x="358.0" y="431.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="391.4" y="444.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<text x="40.0" y="465.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#59636e" text-anchor="start">Each row also says what the paper does, with a quote and its location.</text>
-<text x="40.0" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#59636e" text-anchor="start">Dissect leaves out Met? and the shaded rows.</text>
-<text x="40.0" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328" text-anchor="start">2- Value words in context</text>
-<text x="470.0" y="506.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">up to 10 rows</text>
-<rect x="40.0" y="516.0" width="430.0" height="22.0" rx="0" fill="#eef1f4" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Kind</text>
-<text x="160.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Sentence, value word in bold</text>
-<text x="336.0" y="531.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Where</text>
-<rect x="40.0" y="538.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="553.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">Problem word</text>
-<text x="160.0" y="553.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">“…is incomplete…”</text>
-<text x="336.0" y="553.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Section 1, paragraph 1</text>
-<rect x="40.0" y="560.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="575.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">Community word</text>
-<text x="160.0" y="575.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">“Most practitioners…”</text>
-<text x="336.0" y="575.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Section 1, paragraph 1</text>
-<text x="40.0" y="610.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328" text-anchor="start">Reusable frames</text>
-<text x="470.0" y="610.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">up to 3</text>
-<text x="40.0" y="628.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Sentence patterns to borrow, with the specifics as [slots]</text>
-<text x="40.0" y="659.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328" text-anchor="start">10- Pitfalls</text>
-<text x="470.0" y="659.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">4 checks</text>
-<rect x="40.0" y="669.0" width="430.0" height="22.0" rx="0" fill="#eef1f4" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="684.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Pitfall</text>
-<text x="348.0" y="684.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Avoided?</text>
-<rect x="40.0" y="691.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="706.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">Background opening</text>
-<rect x="348.0" y="694.0" width="57.0" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="376.5" y="707.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Avoided</text>
-<rect x="40.0" y="713.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="728.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">The writers' interest as the reason</text>
-<rect x="348.0" y="716.0" width="57.0" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="376.5" y="729.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Avoided</text>
-<rect x="40.0" y="735.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="750.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">Originality as the value</text>
-<rect x="348.0" y="738.0" width="57.0" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="376.5" y="751.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Avoided</text>
-<rect x="40.0" y="757.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="48.0" y="772.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">Results without consequence</text>
-<rect x="348.0" y="760.0" width="54.5" height="17.0" rx="8.5" fill="#c62828" stroke="none" stroke-width="1"/>
-<text x="375.3" y="773.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Present</text>
-<text x="40.0" y="794.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#59636e" text-anchor="start">Each present pitfall gets a quote and its location.</text>
-<rect x="40.0" y="811.0" width="430.0" height="104.0" rx="6" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
-<text x="52.0" y="832.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#1f2328" text-anchor="start">How to fix</text>
-<text x="458.0" y="832.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">self-check only</text>
-<text x="52.0" y="853.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">One line for each one not fully met, such as</text>
-<text x="52.0" y="869.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">“6- Stakes: say what the problem costs these readers.”</text>
-<text x="52.0" y="885.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Priority fix: the one that most limits value, and why</text>
-<text x="52.0" y="901.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Untouched: numbers, results and technical claims</text>
-<text x="514.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1f2328" text-anchor="start">effective-writing</text>
-<text x="976.0" y="44.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="normal" fill="#59636e" text-anchor="end">one paragraph</text>
-<rect x="514" y="58" width="462" height="634" rx="8" fill="#ffffff" stroke="#d1d9e0" stroke-width="1.2"/>
-<text x="530.0" y="84.0" font-family="Helvetica, Arial, sans-serif" font-size="13.5" font-weight="bold" fill="#1f2328" text-anchor="start">Effective-writing report · Self-check or Dissect</text>
-<text x="530.0" y="108.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Reader card: readers · what they believe now · what they value ·</text>
-<text x="530.0" y="125.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">what they should think or do after reading · how they read</text>
-<text x="530.0" y="154.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328" text-anchor="start">The paragraph</text>
-<text x="960.0" y="154.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">one sentence per line</text>
-<text x="530.0" y="178.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2328" text-anchor="start">S1</text>
-<rect x="560.0" y="169.0" width="300.0" height="10.0" rx="3" fill="#eef1f4" stroke="none" stroke-width="1"/>
-<text x="530.0" y="200.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2328" text-anchor="start">S2</text>
-<rect x="560.0" y="191.0" width="370.0" height="10.0" rx="3" fill="#eef1f4" stroke="none" stroke-width="1"/>
-<text x="530.0" y="222.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2328" text-anchor="start">S3</text>
-<rect x="560.0" y="213.0" width="250.0" height="10.0" rx="3" fill="#eef1f4" stroke="none" stroke-width="1"/>
-<text x="530.0" y="244.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2328" text-anchor="start">S4</text>
-<rect x="560.0" y="235.0" width="330.0" height="10.0" rx="3" fill="#eef1f4" stroke="none" stroke-width="1"/>
-<text x="530.0" y="272.0" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2328" text-anchor="start">Criteria table</text>
-<text x="960.0" y="272.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">all 10 rows, both modes</text>
-<rect x="530.0" y="282.0" width="430.0" height="22.0" rx="0" fill="#eef1f4" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="297.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Criterion</text>
-<text x="862.0" y="297.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#59636e" text-anchor="start">Met?</text>
-<rect x="530.0" y="304.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="319.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">1- Opening gives readers a role</text>
-<rect x="862.0" y="307.0" width="55.1" height="17.0" rx="8.5" fill="#c62828" stroke="none" stroke-width="1"/>
-<text x="889.5" y="320.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Not met</text>
-<rect x="530.0" y="326.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="341.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">2- Names and challenges what readers believe</text>
-<rect x="862.0" y="329.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="895.4" y="342.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<rect x="530.0" y="348.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="363.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">3- Shows what is at stake for readers</text>
-<rect x="862.0" y="351.0" width="55.1" height="17.0" rx="8.5" fill="#c62828" stroke="none" stroke-width="1"/>
-<text x="889.5" y="364.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Not met</text>
-<rect x="530.0" y="370.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="385.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">4- Offers something readers can use</text>
-<rect x="862.0" y="373.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="879.0" y="386.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="530.0" y="392.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="407.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">5- Sentence subjects are what readers care about</text>
-<rect x="862.0" y="395.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="895.4" y="408.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<rect x="530.0" y="414.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="429.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">6- Sentence endings carry the key point</text>
-<rect x="862.0" y="417.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="879.0" y="430.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="530.0" y="436.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="451.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">7- Long sentences pay off early</text>
-<rect x="862.0" y="439.0" width="91.2" height="17.0" rx="8.5" fill="#6b7280" stroke="none" stroke-width="1"/>
-<text x="907.6" y="452.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Does not apply</text>
-<rect x="530.0" y="458.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="473.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">8- No sentence needs a reread</text>
-<rect x="862.0" y="461.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="879.0" y="474.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="530.0" y="480.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="495.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">9- Nothing slows readers down</text>
-<rect x="862.0" y="483.0" width="34.1" height="17.0" rx="8.5" fill="#2e7d32" stroke="none" stroke-width="1"/>
-<text x="879.0" y="496.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Met</text>
-<rect x="530.0" y="502.0" width="430.0" height="22.0" rx="0" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
-<text x="538.0" y="517.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#1f2328" text-anchor="start">10- Changes what readers think, not only shows knowledge</text>
-<rect x="862.0" y="505.0" width="66.8" height="17.0" rx="8.5" fill="#a15c00" stroke="none" stroke-width="1"/>
-<text x="895.4" y="518.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#ffffff" text-anchor="middle">Partly met</text>
-<text x="530.0" y="539.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#59636e" text-anchor="start">Each row also says what the paragraph does, citing S1, S2, …</text>
-<text x="530.0" y="554.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#59636e" text-anchor="start">Dissect, for someone else's paragraph: the same table, no fixes.</text>
-<rect x="530.0" y="572.0" width="430.0" height="104.0" rx="6" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
-<text x="542.0" y="593.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" font-weight="bold" fill="#1f2328" text-anchor="start">How to fix</text>
-<text x="948.0" y="593.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="normal" fill="#59636e" text-anchor="end">self-check only</text>
-<text x="542.0" y="614.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">One line for each one not fully met, such as</text>
-<text x="542.0" y="630.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">“1- Opening gives readers a role: start S1 from their question.”</text>
-<text x="542.0" y="646.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Priority fix: the one that most limits value, and why</text>
-<text x="542.0" y="662.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="normal" fill="#59636e" text-anchor="start">Untouched: numbers, results and technical claims</text>
-<text x="500.0" y="955.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="normal" fill="#59636e" text-anchor="middle">The same layout, in the same order, every time. Statuses here are examples.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1348" height="1094" viewBox="0 0 1198 972">
+<rect width="1198" height="972" fill="#ffffff"/>
+<text x="28.0" y="50.0" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">mcenerney-lens</tspan></text>
+<text x="28.0" y="72.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#424a53" text-anchor="start"><tspan font-weight="normal">A whole paper · Dissect or Self-check</tspan></text>
+<line x1="28.0" y1="84.0" x2="546.0" y2="84.0" stroke="#1f2328" stroke-width="1.2"/>
+<text x="28.0" y="112.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Text  </tspan><tspan font-weight="normal">title, venue, sections read</tspan></text>
+<text x="28.0" y="131.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Readers  </tspan><tspan font-weight="normal">the research community; wider readers</tspan></text>
+<text x="28.0" y="166.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Main table</tspan></text>
+<line x1="28.0" y1="178.0" x2="546.0" y2="178.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="30.0" y="193.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Field</tspan></text>
+<text x="278.0" y="193.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Met?</tspan></text>
+<text x="354.0" y="193.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">What the paper does, and where</tspan></text>
+<line x1="28.0" y1="200.0" x2="546.0" y2="200.0" stroke="#1f2328" stroke-width="0.7"/>
+<text x="30.0" y="215.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">1- Readers</tspan></text>
+<text x="278.0" y="215.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="215.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 1, paragraph 1)</tspan></text>
+<text x="30.0" y="236.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">2- Value words</tspan></text>
+<text x="278.0" y="236.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="236.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">See the table below</tspan></text>
+<text x="30.0" y="257.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">3- Value offered</tspan></text>
+<text x="278.0" y="257.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="354.0" y="257.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Abstract)</tspan></text>
+<text x="30.0" y="278.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">4- Problem</tspan></text>
+<text x="278.0" y="278.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="278.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 1, paragraph 2)</tspan></text>
+<text x="30.0" y="299.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">5- Stance toward prior work</tspan></text>
+<text x="278.0" y="299.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="299.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 2, paragraph 3)</tspan></text>
+<text x="30.0" y="320.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">6- Stakes</tspan></text>
+<text x="278.0" y="320.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#cf222e" text-anchor="start"><tspan font-weight="bold">Not met</tspan></text>
+<text x="354.0" y="320.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">No cost to readers is stated</tspan></text>
+<text x="30.0" y="341.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">7- Doubts answered</tspan></text>
+<text x="278.0" y="341.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="354.0" y="341.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 4, paragraph 2)</tspan></text>
+<text x="30.0" y="362.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">8- Contribution</tspan></text>
+<text x="278.0" y="362.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="362.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 1, paragraph 4)</tspan></text>
+<text x="30.0" y="383.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">9- Structure</tspan></text>
+<text x="278.0" y="383.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="383.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Section headings 1–5</tspan></text>
+<text x="30.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">10- Pitfalls</tspan></text>
+<text x="278.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="354.0" y="404.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">See the table below</tspan></text>
+<line x1="28.0" y1="411.0" x2="546.0" y2="411.0" stroke="#8c959f" stroke-width="0.7" stroke-dasharray="3 3"/>
+<text x="30.0" y="426.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#424a53" text-anchor="start" font-style="italic"><tspan font-weight="normal">Self-check only</tspan></text>
+<text x="30.0" y="446.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">11- Value words in the first two paragraphs</tspan></text>
+<text x="278.0" y="446.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="354.0" y="446.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 1, paragraph 1)</tspan></text>
+<text x="30.0" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">12- Opening states the problem</tspan></text>
+<text x="278.0" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="354.0" y="467.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 1, paragraph 1)</tspan></text>
+<line x1="28.0" y1="477.0" x2="546.0" y2="477.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="28.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">2- Value words in context</tspan></text>
+<line x1="28.0" y1="519.0" x2="546.0" y2="519.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="30.0" y="534.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Kind</tspan></text>
+<text x="142.0" y="534.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Sentence, value word in bold</tspan></text>
+<text x="354.0" y="534.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Where</tspan></text>
+<line x1="28.0" y1="541.0" x2="546.0" y2="541.0" stroke="#1f2328" stroke-width="0.7"/>
+<text x="30.0" y="556.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Problem word</tspan></text>
+<text x="142.0" y="556.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…the models are </tspan><tspan font-weight="bold">incomplete</tspan><tspan font-weight="normal">…”</tspan></text>
+<text x="354.0" y="556.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Section 1, paragraph 1</tspan></text>
+<text x="30.0" y="577.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Community word</tspan></text>
+<text x="142.0" y="577.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“</tspan><tspan font-weight="bold">Most practitioners</tspan><tspan font-weight="normal"> assume…”</tspan></text>
+<text x="354.0" y="577.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Section 1, paragraph 1</tspan></text>
+<line x1="28.0" y1="587.0" x2="546.0" y2="587.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="28.0" y="617.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Reusable frames</tspan></text>
+<text x="28.0" y="636.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">e.g.  </tspan><tspan font-weight="normal">[Approach] is standard for [task], but it [fails when …].</tspan></text>
+<text x="28.0" y="669.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">10- Pitfalls</tspan></text>
+<line x1="28.0" y1="681.0" x2="546.0" y2="681.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="30.0" y="696.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Pitfall</tspan></text>
+<text x="278.0" y="696.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Avoided?</tspan></text>
+<text x="354.0" y="696.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">What the paper does, and where</tspan></text>
+<line x1="28.0" y1="703.0" x2="546.0" y2="703.0" stroke="#1f2328" stroke-width="0.7"/>
+<text x="30.0" y="718.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Background opening</tspan></text>
+<text x="278.0" y="718.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Avoided</tspan></text>
+<text x="354.0" y="718.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">–</tspan></text>
+<text x="30.0" y="739.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">The writers' interest as the reason</tspan></text>
+<text x="278.0" y="739.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Avoided</tspan></text>
+<text x="354.0" y="739.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">–</tspan></text>
+<text x="30.0" y="760.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Originality as the value</tspan></text>
+<text x="278.0" y="760.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Avoided</tspan></text>
+<text x="354.0" y="760.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">–</tspan></text>
+<text x="30.0" y="781.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Results without consequence</tspan></text>
+<text x="278.0" y="781.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#cf222e" text-anchor="start"><tspan font-weight="bold">Present</tspan></text>
+<text x="354.0" y="781.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">“…” (Section 4, paragraph 5)</tspan></text>
+<line x1="28.0" y1="791.0" x2="546.0" y2="791.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="28.0" y="821.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">How to fix</tspan></text>
+<text x="28.0" y="852.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">6- Stakes: say what the problem costs these readers.</tspan></text>
+<text x="28.0" y="871.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Priority fix: </tspan><tspan font-weight="normal">the gap that most limits value, and why</tspan></text>
+<text x="28.0" y="890.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Untouched: </tspan><tspan font-weight="normal">numbers, results and technical claims</tspan></text>
+<text x="586.0" y="50.0" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">effective-writing</tspan></text>
+<text x="586.0" y="72.0" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#424a53" text-anchor="start"><tspan font-weight="normal">One paragraph · Self-check or Dissect</tspan></text>
+<line x1="586.0" y1="84.0" x2="1170.0" y2="84.0" stroke="#1f2328" stroke-width="1.2"/>
+<text x="586.0" y="112.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Reader card  </tspan><tspan font-weight="normal">who reads · what they believe now · what they value</tspan></text>
+<text x="665.2" y="131.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">what they should think or do after · how they read</tspan></text>
+<text x="586.0" y="166.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">The paragraph</tspan></text>
+<text x="586.0" y="197.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">S1</tspan></text>
+<text x="614.0" y="197.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">First sentence, exactly as written.</tspan></text>
+<text x="586.0" y="216.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">S2</tspan></text>
+<text x="614.0" y="216.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Second sentence, exactly as written.</tspan></text>
+<text x="586.0" y="235.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">S3</tspan></text>
+<text x="614.0" y="235.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Third sentence, exactly as written.</tspan></text>
+<text x="586.0" y="254.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">S4</tspan></text>
+<text x="614.0" y="254.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">… one line per sentence, to the end of the paragraph.</tspan></text>
+<text x="586.0" y="284.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Criteria table</tspan></text>
+<line x1="586.0" y1="296.0" x2="1170.0" y2="296.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="588.0" y="311.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Criterion</tspan></text>
+<text x="914.0" y="311.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Met?</tspan></text>
+<text x="1018.0" y="311.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">What the paragraph does</tspan></text>
+<line x1="586.0" y1="318.0" x2="1170.0" y2="318.0" stroke="#1f2328" stroke-width="0.7"/>
+<text x="588.0" y="333.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">1- Opening gives readers a role</tspan></text>
+<text x="914.0" y="333.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#cf222e" text-anchor="start"><tspan font-weight="bold">Not met</tspan></text>
+<text x="1018.0" y="333.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S1 names a topic only</tspan></text>
+<text x="588.0" y="354.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">2- Names and challenges what readers believe</tspan></text>
+<text x="914.0" y="354.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="1018.0" y="354.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S2 implies the belief</tspan></text>
+<text x="588.0" y="375.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">3- Shows what is at stake for readers</tspan></text>
+<text x="914.0" y="375.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#cf222e" text-anchor="start"><tspan font-weight="bold">Not met</tspan></text>
+<text x="1018.0" y="375.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">Nothing at risk in S1–S4</tspan></text>
+<text x="588.0" y="396.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">4- Offers something readers can use</tspan></text>
+<text x="914.0" y="396.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="1018.0" y="396.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S4: “…”</tspan></text>
+<text x="588.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">5- Sentence subjects are what readers care about</tspan></text>
+<text x="914.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="1018.0" y="417.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S2, S3: “this study”</tspan></text>
+<text x="588.0" y="438.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">6- Sentence endings carry the key point</tspan></text>
+<text x="914.0" y="438.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="1018.0" y="438.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S1–S4 end on content</tspan></text>
+<text x="588.0" y="459.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">7- Long sentences pay off early</tspan></text>
+<text x="914.0" y="459.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#57606a" text-anchor="start"><tspan font-weight="bold">Does not apply</tspan></text>
+<text x="1018.0" y="459.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S1–S4 are short</tspan></text>
+<text x="588.0" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">8- No sentence needs a reread</tspan></text>
+<text x="914.0" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="1018.0" y="480.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S1–S4 read once</tspan></text>
+<text x="588.0" y="501.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">9- Nothing slows readers down</tspan></text>
+<text x="914.0" y="501.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a7f37" text-anchor="start"><tspan font-weight="bold">Met</tspan></text>
+<text x="1018.0" y="501.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">No friction in S1–S4</tspan></text>
+<text x="588.0" y="522.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">10- Changes what readers think, not only shows knowledge</tspan></text>
+<text x="914.0" y="522.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9a6700" text-anchor="start"><tspan font-weight="bold">Partly met</tspan></text>
+<text x="1018.0" y="522.0" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">S3 only reports</tspan></text>
+<line x1="586.0" y1="532.0" x2="1170.0" y2="532.0" stroke="#1f2328" stroke-width="1.4"/>
+<text x="586.0" y="562.0" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">How to fix</tspan></text>
+<text x="586.0" y="593.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="normal">1- Opening gives readers a role: start S1 from their question.</tspan></text>
+<text x="586.0" y="612.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Priority fix: </tspan><tspan font-weight="normal">the gap that most limits value, and why</tspan></text>
+<text x="586.0" y="631.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#1f2328" text-anchor="start"><tspan font-weight="bold">Untouched: </tspan><tspan font-weight="normal">numbers, results and technical claims</tspan></text>
+<line x1="566.0" y1="34.0" x2="566.0" y2="890.0" stroke="#d0d7de" stroke-width="0.7"/>
+<line x1="28.0" y1="908.0" x2="1170.0" y2="908.0" stroke="#d0d7de" stroke-width="0.7"/>
+<text x="28.0" y="924.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#424a53" text-anchor="start"><tspan font-weight="bold">Report layouts. </tspan><tspan font-weight="normal">Both skills return this layout, in this order, for every paper or paragraph; statuses and sample text are examples.</tspan></text>
+<text x="28.0" y="943.0" font-family="Helvetica, Arial, sans-serif" font-size="12.5" fill="#424a53" text-anchor="start"><tspan font-weight="normal">Dissect mode leaves out How to fix; for mcenerney-lens it also leaves out the Met? column and rows 11–12.</tspan></text>
 </svg>
